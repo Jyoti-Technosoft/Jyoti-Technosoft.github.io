@@ -2,11 +2,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
+    "noImplicitAny": false,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
@@ -22,7 +23,13 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@app/*": ["app/*"],
+      "@assets/*": ["assets/*"],
+      "@environments/*": ["environments/*"],
+    },
+    "allowSyntheticDefaultImports": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
