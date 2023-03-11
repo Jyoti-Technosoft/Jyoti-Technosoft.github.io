@@ -1,10 +1,17 @@
 <p>
     <mat-toolbar color="primary">
-      <div class="topnav">
-        <a class="" routerLink="#home">Home</a>
-        <a routerLink="#news">News</a>
-        <a routerLink="#contact">Contact</a>
-        <a routerLink="#about" class="split">Help</a>
+      <div class="col-12 topnav d-flex justify-content-between px-5">
+        <div class="label-icon">
+          
+        </div>
+        <div>
+              JYOTI TECHNOSOFT
+        </div>
+        <div>
+          <ng-container *ngFor="let item of menuItems; index as i">
+              <a class="px-2" routerLink="item?.routerLink">{{ item?.label}}</a>
+          </ng-container>
+        </div>
       </div>
       <div></div>
     </mat-toolbar>

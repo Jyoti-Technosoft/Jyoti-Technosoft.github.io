@@ -6,7 +6,8 @@ import { MatIconModule } from '@angular/material/icon';
 
 const materialModule = [
   MatToolbarModule,
-  MatIconModule
+  MatIconModule,
+  
 ]
 
 @NgModule({
@@ -14,7 +15,7 @@ const materialModule = [
   imports: [
     CommonModule,
     BrowserAnimationsModule,
-    materialModule
+    materialModule,
   ],
   exports: [
     BrowserAnimationsModule,
