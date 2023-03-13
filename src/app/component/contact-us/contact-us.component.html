@@ -1,7 +1,23 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-4">
-            klkj
+           <div class="contact-info">
+            <h6>Fill up the form and our Team will get back to you within 24 hours.</h6>
+            <ng-container *ngFor="let item of contactInfo">
+                <div class="contact-details" >
+                    <div class="row">
+                        <div class="col col-4">
+                            <mat-icon class="icon">
+                                <i class="fa {{item?.icon}} icon-size" aria-hidden="true"></i>
+                            </mat-icon>
+                        </div>
+                        <div class="col col-8">
+                            {{item?.label}}
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+           </div>
         </div>
         <div class="col-8">
            <h3>Contact Us</h3>
@@ -10,7 +26,7 @@
                 <div class="row">
                     <div class="col-6 mb-3">
                         <mat-form-field class="example-full-width col-12">
-                            <mat-label>First Name *</mat-label>
+                            <mat-label>First Name</mat-label>
                             <input class="col-12 " type="text" matInput formControlName="firstName"
                             placeholder="Jhon">
                         </mat-form-field>
@@ -26,7 +42,7 @@
                 <div class="row">
                     <div class="col-6 mb-3">
                         <mat-form-field class="example-full-width col-12">
-                            <mat-label>Email Address *</mat-label>
+                            <mat-label>Email Address</mat-label>
                             <input class="col-12 " type="text" matInput formControlName="emailAddress"
                             placeholder="John@yahoomail.com">
                         </mat-form-field>
@@ -42,7 +58,7 @@
                 <div class="row">
                     <div class="col-12 mb-3">
                         <mat-form-field class="example-full-width col-12">
-                            <mat-label>Subject *</mat-label>
+                            <mat-label>Subject</mat-label>
                             <input class="col-12 " type="text" matInput formControlName="subject"
                             placeholder="subject">
                         </mat-form-field>
@@ -51,14 +67,19 @@
                 <div class="row">
                     <div class="col-12 mb-3">
                         <mat-form-field class="example-full-width col-12">
-                            <mat-label>Message *</mat-label>
+                            <mat-label>Message</mat-label>
                             <textarea class="col-12" matInput placeholder="Write you Message" rows="5"></textarea>
                         </mat-form-field>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 mb-3">
-                        <button mat-flat-button color="accent">Submit</button>
+                        <re-captcha formControlName="recaptcha" (resolved)="resolved($event)" siteKey="6LfmNKMZAAAAAKrDxRn2_NcHoRPW9-uFuWs98XCx"></re-captcha>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <button mat-flat-button color="accent" [disabled]="!this.contactUsForm.valid">Submit</button>
                     </div>
                 </div>
             </form>
