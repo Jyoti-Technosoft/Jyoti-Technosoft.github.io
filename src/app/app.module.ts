@@ -9,6 +9,7 @@ import { BlankComponent } from '@app/layout/blank/blank.component';
 import { FullLayoutComponent } from '@app/layout/full-layout/full-layout.component';
 import { SharedModule } from '@app/shared-components/shared.module';
 import { FooterComponent } from '@app/component/footer/footer.component';
+import { ContactUsComponent } from './component/contact-us/contact-us.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { FooterComponent } from '@app/component/footer/footer.component';
     BlankComponent,
     MainHeaderComponent,
     FooterComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,
