@@ -5,6 +5,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
 
 const materialModule = [
   MatToolbarModule,
@@ -18,13 +19,15 @@ const materialModule = [
     BrowserAnimationsModule,
     materialModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
   ],
   exports: [
     BrowserAnimationsModule,
     materialModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    RecaptchaModule,
+    RecaptchaFormsModule
   ]
 })
 export class SharedModule { }
