@@ -6,10 +6,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
+import { MatListModule } from '@angular/material/list';
+
 
 const materialModule = [
   MatToolbarModule,
-  MatIconModule
+  MatIconModule,
+  MatInputModule,
+  MatListModule
 ]
 
 @NgModule({
@@ -19,13 +23,11 @@ const materialModule = [
     BrowserAnimationsModule,
     materialModule,
     ReactiveFormsModule,
-    MatInputModule,
   ],
   exports: [
     BrowserAnimationsModule,
     materialModule,
     ReactiveFormsModule,
-    MatInputModule,
     RecaptchaModule,
     RecaptchaFormsModule
   ]
