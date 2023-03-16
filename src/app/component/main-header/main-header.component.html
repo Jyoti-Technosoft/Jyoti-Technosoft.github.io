@@ -1,18 +1,35 @@
-<p>
-    <mat-toolbar color="primary">
-      <div class="col-12 topnav d-flex justify-content-between px-5">
-        <div class="label-icon">
-          
-        </div>
-        <div>
-              JYOTI TECHNOSOFT
-        </div>
-        <div>
-          <ng-container *ngFor="let item of menuItems; index as i">
-              <a class="px-2" routerLink="item?.routerLink">{{ item?.label}}</a>
-          </ng-container>
-        </div>
+<div class="navbar-area navbar-style-two is-sticky" #mainNavbar>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a routerlink="/" class="navbar-brand"
+        ><img src="assets/images/logo.png" alt="logo" height="50px" /></a
+      ><button type="button" class="navbar-toggler">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        id="navbarSupportedContent"
+        class="collapse navbar-collapse justify-content-end"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item" *ngFor="let item of menuItems">
+            <a
+              routerlink="item?.routerLink"
+              routerlinkactive="active"
+              class="nav-link"
+              >{{ item?.label }}</a
+            >
+            <ng-container *ngIf="item?.subItems?.length">
+              <ul class="dropdown-menu">
+                <li class="nav-item" *ngFor="let subItem of item?.subItems">
+                  <a class="nav-link" routerLink="subItem?.routerlink"
+                    >{{ subItem?.label }}<i class="bx bx-chevron-right"></i
+                  ></a>
+                </li>
+              </ul>
+            </ng-container>
+          </li>
+        </ul>
       </div>
-      <div></div>
-    </mat-toolbar>
-  </p>
+    </nav>
+  </div>
+</div>
