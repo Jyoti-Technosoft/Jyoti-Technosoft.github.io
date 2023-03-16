@@ -1,0 +1,113 @@
+.margin-top {
+  margin-top: 5.12rem !important;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.cards .card_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card_box .card_inside {
+  flex: 0 50%;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
+    0 5px 15px 0 rgba(37, 44, 97, 0.15);
+  border-radius: 15px;
+  margin: 8px;
+  padding: 20px 25px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  min-height: 500px;
+  transition: 0.7s;
+}
+
+.card_box .card_inside:hover {
+  background: #309df0;
+  color: #fff;
+  transform: scale(1.1);
+  z-index: 9;
+}
+
+.card_box .card_inside:hover::before {
+  background: rgb(85 108 214 / 10%);
+}
+
+.card_box .card_inside:hover .card_title h3,
+.card_box .card_inside:hover .card_description p {
+  color: #fff;
+}
+
+.card_box .card_inside:before {
+  content: "";
+  position: absolute;
+  background: rgb(85 108 214 / 5%);
+  width: 170px;
+  height: 400px;
+  z-index: -1;
+  transform: rotate(42deg);
+  right: -56px;
+  top: -23px;
+  border-radius: 35px;
+}
+
+.card_box .card_inside:hover .card_description button {
+  background: #fff !important;
+  color: #309df0;
+}
+
+.card_inside .card_title h3 {
+  color: #367dc8 !important;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 55px;
+  margin-bottom: 30px;
+  text-align: center;
+  span {
+    color: #615e5f !important;
+  }
+}
+
+.card_inside .card_description p {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.card_inside .card_description button {
+  border: 0;
+  border-radius: 15px;
+  background: linear-gradient(
+    140deg,
+    #99c122 0%,
+    #99c122 50%,
+    #99c122 75%
+  ) !important;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 5px 16px;
+}
+
+.hover_color_bubble {
+  position: absolute;
+  background: rgb(54 81 207 / 15%);
+  width: 100rem;
+  height: 100rem;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  top: 16rem;
+  border-radius: 50%;
+  transform: rotate(-36deg);
+  left: -18rem;
+  transition: 0.7s;
+}
+
+.card_box .card_inside:hover .hover_color_bubble {
+  top: 0rem;
+}
