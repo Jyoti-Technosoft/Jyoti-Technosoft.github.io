@@ -7,7 +7,7 @@ import { Component, OnInit, HostListener, Renderer2, ViewChild, ElementRef } fro
 })
 export class MainHeaderComponent implements OnInit {
   menuItems = [
-    { label: 'Home', icon: 'pi pi-fw pi-plus', routerlink: 'Home' },
+    { label: 'Home', icon: 'pi pi-fw pi-plus', routerlink: 'home' },
     {
       label: 'Hire a Developer',
       icon: 'pi pi-fw pi-download',
@@ -24,7 +24,7 @@ export class MainHeaderComponent implements OnInit {
       routerlink: 'portfolio',
     },
     { label: 'Services', icon: 'pi pi-fw pi-refresh', routerlink: 'services' },
-    { label: 'Contact', icon: 'pi pi-fw pi-refresh', routerlink: 'contact' },
+    { label: 'Contact', icon: 'pi pi-fw pi-refresh', routerlink: 'contact-us' },
     { label: 'Career', icon: 'pi pi-fw pi-refresh', routerlink: 'career' },
   ];
 
