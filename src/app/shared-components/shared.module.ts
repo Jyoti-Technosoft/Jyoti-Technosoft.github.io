@@ -7,13 +7,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
 import { MatListModule } from '@angular/material/list';
-
+import {MatCardModule} from '@angular/material/card';
 
 const materialModule = [
   MatToolbarModule,
   MatIconModule,
   MatInputModule,
-  MatListModule
+  MatListModule,
+  MatCardModule
 ]
 
 @NgModule({

@@ -11,6 +11,7 @@ import { SharedModule } from '@app/shared-components/shared.module';
 import { FooterComponent } from '@app/component/footer/footer.component';
 import { ContactUsComponent } from '@app/component/contact-us/contact-us.component';
 import { ServicesComponent } from '@app/component/services/services.component';
+import { CareerComponent } from './component/career/career.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ServicesComponent } from '@app/component/services/services.component';
     FooterComponent,
     ContactUsComponent,
     ServicesComponent,
+    CareerComponent,
   ],
   imports: [
     BrowserModule,

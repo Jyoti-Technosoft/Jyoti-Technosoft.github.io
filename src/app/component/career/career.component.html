@@ -1,0 +1,145 @@
+<div class="career-banner-wrap">
+  <img
+    src="https://www.zealousys.com/wp-content/themes/zealous/images/company/career-banner.webp"
+    class="img-fluid entered lazyloaded"
+    alt="Career"
+    data-lazy-src="https://www.zealousys.com/wp-content/themes/zealous/images/company/career-banner.webp"
+    data-ll-status="loaded"
+  /><noscript
+    ><img
+      src="https://www.zealousys.com/wp-content/themes/zealous/images/company/career-banner.webp"
+      class="img-fluid"
+      alt="Career"
+  /></noscript>
+  <h1>
+    <span class="d-block">Passionate</span> Come Join
+    <span style="color: F6A21C; text-decoration: line-through">
+      <span style="color: white" class="del-text">JYOTI Technosoft</span>
+    </span>
+    Environment
+  </h1>
+</div>
+
+<section class="main-section career-block padding-top col-12">
+  <div class="container mt-3">
+    <div class="main-title">
+      <h2 class="text-capitalize">Career</h2>
+      <div class="circle-svg circle-16 round-scale"></div>
+      <div class="circle-svg circle-lc round-scale"></div>
+    </div>
+    <div class="search-location-form col-12 mb-3">
+      <div class="form-group select-location-input col-3">
+        <div id="filtering" class="custom-html-dropdown" role="navigation">
+          <button
+            class="dropdown-input cat-all col-12 p-2"
+            type="button"
+            id="job-location"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Location
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="job-location">
+            <li>
+              <button
+                type="button"
+                class="dropdown-item"
+                onclick="filterSelection('all')"
+              >
+                All Location
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="dropdown-item"
+                onclick="filterSelection('adajan-surat')"
+              >
+                Adajan (Surat)
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="dropdown-item"
+                onclick="filterSelection('bhatar-surat')"
+              >
+                Bhatar (Surat)
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="form-search-block col-9">
+        <div class="row">
+          <div class="col-sm-8">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="jobInput"
+                onkeyup="searchFunction()"
+                placeholder="Keywords (ex php developer)"
+              />
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <a href="" class="btn btn-primary">Show All Jobs</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="careers-skills-block col-12 d-flex">
+      <div class="col-3 py-0">
+        <mat-card
+          class="careers-items-list filter-job-results mt-4"
+          *ngFor="let careersItem of careers"
+        >
+          <mat-card-header>
+            <mat-card-title class="header-title">{{
+              careersItem.position
+            }}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="careers-experience">{{
+            careersItem.experience
+          }}</mat-card-content>
+        </mat-card>
+      </div>
+      <div class="careers-content-block col-9">
+        <mat-card
+          class="careers-items-list filter-job-results mt-4 fit-content"
+        >
+          <mat-card-header>
+            <mat-card-title class="header-title detail-view">{{
+              careers[0].position
+            }}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="careers-experience">
+            {{ careers[0].experience }}
+            <mat-list>
+              <mat-list-item *ngFor="let item of requiredProgrammingLanguage"
+                class="w-auto d-inline-block p-3 m-1 border text-center skill-set-list"
+              >
+                <span> {{item}} </span>
+              </mat-list-item>
+            </mat-list>
+            <div *ngFor="let item of careerSkillSets">
+              <h5>{{ item.label }}</h5>
+              <mat-list>
+                <mat-list-item *ngFor="let data of item?.objectives">
+                  <mat-icon matListIcon class="icon-size">lens</mat-icon>
+                  <span>{{ data.responsiblity }}</span>
+                </mat-list-item>
+              </mat-list>
+            </div>
+            <div class="d-flex justify-content-end">
+              <button class="bg-color border-0">Apply now</button>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</section>
