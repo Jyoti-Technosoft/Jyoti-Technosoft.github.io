@@ -57,7 +57,7 @@ $header-text-color: #3a7dc8;
 }  
 
 .skill-set-list {
-    border-radius: 100px;
+    border-radius: 100px !important;
 }
 
 .mat-mdc-list-base { 
@@ -72,6 +72,7 @@ $header-text-color: #3a7dc8;
 
 .icon-size {
     font-size: 10px;
+    align-items: center;
 }
 
 .border-0 {
@@ -84,4 +85,25 @@ $header-text-color: #3a7dc8;
     background-color: #3a7dc81f;
     color: $base-text-color;
     font-weight: 400;
+}
+
+.mdc-list-item__primary-text {
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    word-break: break-all !important;
+    word-break: break-word  !important;
+    text-overflow: unset !important; 
+    white-space: unset  !important ;
+    overflow: unset !important;
+    display: inline-flex !important;
+}
+
+.mdc-list-item__content {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    word-break: break-word;
+    text-overflow: unset !important; 
+    white-space: unset  !important ;
+    overflow: unset !important;
 }
