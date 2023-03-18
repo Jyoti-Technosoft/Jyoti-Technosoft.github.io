@@ -1,32 +1,29 @@
+<!-- src="../../../assets/images/career123.png" -->
 <div class="career-banner-wrap">
   <img
-    src="https://www.zealousys.com/wp-content/themes/zealous/images/company/career-banner.webp"
+    src="https://www.toptal.com/developers/img-resize/view/190323928d66d26aee5e499601ba447e.png"
     class="img-fluid entered lazyloaded"
     alt="Career"
-    data-lazy-src="https://www.zealousys.com/wp-content/themes/zealous/images/company/career-banner.webp"
+    data-lazy-src="assets/images/hiring.png"
     data-ll-status="loaded"
-  /><noscript
+  />
+  <img
+    src="../../../assets/images/career12.png"
+    class="img-fluid entered lazyloaded"
+    alt="Career"
+    data-lazy-src="assets/images/career12.png"
+    data-ll-status="loaded"
+  />
+  <noscript
     ><img
-      src="https://www.zealousys.com/wp-content/themes/zealous/images/company/career-banner.webp"
+      src="../../../assets/images/career12.png"
       class="img-fluid"
       alt="Career"
   /></noscript>
-  <h1>
-    <span class="d-block">Passionate</span> Come Join
-    <span style="color: F6A21C; text-decoration: line-through">
-      <span style="color: white" class="del-text">JYOTI Technosoft</span>
-    </span>
-    Environment
-  </h1>
 </div>
 
 <section class="main-section career-block padding-top col-12">
   <div class="container mt-3">
-    <div class="main-title">
-      <h2 class="text-capitalize">Career</h2>
-      <div class="circle-svg circle-16 round-scale"></div>
-      <div class="circle-svg circle-lc round-scale"></div>
-    </div>
     <div class="search-location-form col-12 mb-3">
       <div class="form-group select-location-input col-3">
         <div id="filtering" class="custom-html-dropdown" role="navigation">
@@ -65,7 +62,8 @@
       <div class="col-3 py-0">
         <mat-card
           class="careers-items-list filter-job-results mt-4"
-          *ngFor="let careersItem of careers" (click)="onSelect(careersItem)"
+          *ngFor="let careersItem of careers"
+          (click)="onSelect(careersItem)"
         >
           <mat-card-header>
             <mat-card-title class="header-title">{{
@@ -79,7 +77,7 @@
       </div>
       <div class="careers-content-block col-9 mx-3">
         <mat-card
-          class="careers-items-list filter-job-results mt-4 fit-content mx-3 w-100" 
+          class="careers-items-list filter-job-results mt-4 fit-content mx-3 w-100"
         >
           <mat-card-header>
             <mat-card-title class="header-title detail-view">{{
@@ -89,18 +87,24 @@
           <mat-card-content class="careers-experience">
             {{ selectedCareer.experience }}
             <mat-list>
-              <mat-list-item *ngFor="let item of selectedCareer.requireLang"
+              <mat-list-item
+                *ngFor="let item of selectedCareer.requireLang"
                 class="w-auto d-inline-block p-3 m-1 border text-center skill-set-list"
               >
-                <span> {{item}} </span>
+                <span> {{ item }} </span>
               </mat-list-item>
             </mat-list>
             <div *ngFor="let item of selectedCareer.role">
               <h5>{{ item.label }}</h5>
               <mat-list>
-                <mat-list-item *ngFor="let data of item?.objectives" class="h-auto">
+                <mat-list-item
+                  *ngFor="let data of item?.objectives"
+                  class="h-auto"
+                >
                   <div class="d-flex">
-                    <mat-icon matListIcon class="icon-size d-inline-flex">lens</mat-icon>
+                    <mat-icon matListIcon class="icon-size d-inline-flex"
+                      >lens</mat-icon
+                    >
                     <div class="mx-2">{{ data.responsiblity }}</div>
                   </div>
                 </mat-list-item>
