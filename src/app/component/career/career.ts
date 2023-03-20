@@ -1,5 +1,5 @@
 export interface Career {
-  position: string;
+  position: { id: string; label: string };
   experience: string;
   requireLang: string[];
   role: { label: string; objectives: { responsiblity: string }[] }[];

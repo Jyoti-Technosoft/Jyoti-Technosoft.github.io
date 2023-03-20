@@ -5,7 +5,6 @@ import { ContactUsComponent } from '@app/component/contact-us/contact-us.compone
 import { ServicesComponent } from '@app/component/services/services.component';
 import { BlankComponent } from '@app/layout/blank/blank.component';
 import { FullLayoutComponent } from '@app/layout/full-layout/full-layout.component';
-import { CareerComponent } from '@app/component/career/career.component';
 
 const routes: Routes = [
   {
@@ -18,10 +17,14 @@ const routes: Routes = [
         loadChildren: () =>
           import('@app/component/home/home.module').then((m) => m.HomeModule),
       },
+      {
+        path:'career',
+        loadChildren: () => 
+          import('@app/component/career/career.module').then((m) => m.CareerModule),
+      },
       { path: 'about', component: BlankComponent },
       { path: 'contact-us', component: ContactUsComponent },
       { path: 'services', component: ServicesComponent },
-      { path: 'career', component: CareerComponent },
     ]
   },
 ];

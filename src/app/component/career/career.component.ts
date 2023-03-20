@@ -1,4 +1,5 @@
-import { Component, OnInit, } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Career } from '@app/component/career/career';
 
 @Component({
@@ -10,7 +11,7 @@ export class CareerComponent implements OnInit {
   selectedCareer!: Career;
   careers: Career[] = [
     {
-      position: 'React JS Developer',
+      position: { label: 'React JS Developer', id: 'react' },
       experience: 'Exp. 1.6 Years minimum',
       requireLang: ['React JS', 'Bootstrap', 'CSS', 'Javascript', 'Web Pack'],
       role: [
@@ -77,7 +78,7 @@ export class CareerComponent implements OnInit {
       ],
     },
     {
-      position: 'Angular JS Developer',
+      position: { label: 'Angular JS Developer', id: 'react' },
       experience: 'Exp. 1.6 Years minimum',
       requireLang: ['React JS', 'Bootstrap', 'CSS', 'Javascript', 'Web Pack'],
       role: [
@@ -144,7 +145,7 @@ export class CareerComponent implements OnInit {
       ],
     },
     {
-      position: 'React JS Developer',
+      position: { label: 'Node JS Developer', id: 'react' },
       experience: 'Exp. 1.6 Years minimum',
       requireLang: ['React JS', 'Bootstrap', 'CSS', 'Javascript', 'Web Pack'],
       role: [
@@ -211,7 +212,7 @@ export class CareerComponent implements OnInit {
       ],
     },
     {
-      position: 'React JS Developer',
+      position: { label: 'Vue Js Developer', id: 'react' },
       experience: 'Exp. 1.6 Years minimum',
       requireLang: ['React JS', 'Bootstrap', 'CSS', 'Javascript', 'Web Pack'],
       role: [
@@ -278,14 +279,34 @@ export class CareerComponent implements OnInit {
       ],
     },
   ];
+  filterCareer: any;
+  searchedCareer!: string;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.selectedCareer = this.careers[0];
+    this.filterCareer = this.careers;
   }
 
   onSelect(data: Career) {
     this.selectedCareer = data;
+  }
+
+  onSearch(event) {
+    const inputData = event?.target?.value;
+    this.filterCareer = this.careers.filter((jobs) => {
+      return jobs?.position.label.toLowerCase().includes(inputData);
+    });
+  }
+
+  showAll() {
+    this.searchedCareer = '';
+    this.filterCareer = this.careers;
+  }
+
+  applyForjob() {
+    const id = this.selectedCareer?.position?.id;
+    this.router.navigate(['/career/' + id]);
   }
 }

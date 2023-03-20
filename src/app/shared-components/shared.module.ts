@@ -1,36 +1,35 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
 import { MatListModule } from '@angular/material/list';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 const materialModule = [
   MatToolbarModule,
   MatIconModule,
   MatInputModule,
   MatListModule,
-  MatCardModule
-]
+  MatCardModule,
+  MatSelectModule,
+  DragDropModule,
+];
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    BrowserAnimationsModule,
-    materialModule,
-    ReactiveFormsModule,
-  ],
+  imports: [CommonModule, materialModule, ReactiveFormsModule, FormsModule],
   exports: [
-    BrowserAnimationsModule,
     materialModule,
     ReactiveFormsModule,
     RecaptchaModule,
-    RecaptchaFormsModule
-  ]
+    RecaptchaFormsModule,
+    FormsModule,
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}

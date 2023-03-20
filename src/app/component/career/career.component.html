@@ -48,11 +48,15 @@
                 class="form-control"
                 id="jobInput"
                 placeholder="Keywords (ex php developer)"
+                (input)="onSearch($event)"
+                [(ngModel)]="searchedCareer"
               />
             </div>
           </div>
           <div class="col-3">
-            <a href="" class="btn btn-primary w-100">Show All Jobs</a>
+            <button (click)="showAll()" class="btn btn-primary w-100">
+              Show All Jobs
+            </button>
           </div>
         </div>
       </div>
@@ -62,12 +66,12 @@
       <div class="col-3 py-0">
         <mat-card
           class="careers-items-list filter-job-results mt-4"
-          *ngFor="let careersItem of careers"
+          *ngFor="let careersItem of filterCareer"
           (click)="onSelect(careersItem)"
         >
           <mat-card-header>
             <mat-card-title class="header-title">{{
-              careersItem.position
+              careersItem.position.label
             }}</mat-card-title>
           </mat-card-header>
           <mat-card-content class="careers-experience">{{
@@ -81,7 +85,7 @@
         >
           <mat-card-header>
             <mat-card-title class="header-title detail-view">{{
-              selectedCareer.position
+              selectedCareer.position.label
             }}</mat-card-title>
           </mat-card-header>
           <mat-card-content class="careers-experience">
@@ -111,7 +115,9 @@
               </mat-list>
             </div>
             <div class="d-flex justify-content-end">
-              <button class="bg-color border-0">Apply now</button>
+              <button class="bg-color border-0" (click)="applyForjob()">
+                Apply now
+              </button>
             </div>
           </mat-card-content>
         </mat-card>
