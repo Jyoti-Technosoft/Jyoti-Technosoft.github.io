@@ -1,47 +1,54 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+interface contactInfo {
+  label: string;
+  icon: string;
+  descriptionDetails: string;
+  routerlink: string;
+}
+
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
   styleUrls: ['./contact-us.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 export class ContactUsComponent implements OnInit {
   contactUsForm!: FormGroup;
 
   constructor(private fb: FormBuilder) {}
 
-  contactInfo!: { label: string; icon: string; descriptionDetails: string, routerlink:string }[];
+  contactInfo!: contactInfo[];
   socialMedia = [
-    { label: 'facebook', icon: 'fa-facebook-square', routerlink:"Home" },
-    { label: 'twitter', icon: 'fa-twitter-square', routerlink:"hireUs" },
-    { label: 'instagram', icon: 'fa-instagram', routerlink:"portfolio" },
-    { label: 'linkedin', icon: 'fa-linkedin-square', routerlink:"services" }
+    { label: 'facebook', icon: 'fa-facebook-square', routerlink: 'Home' },
+    { label: 'twitter', icon: 'fa-twitter-square', routerlink: 'hireUs' },
+    { label: 'instagram', icon: 'fa-instagram', routerlink: 'portfolio' },
+    { label: 'linkedin', icon: 'fa-linkedin-square', routerlink: 'services' },
   ];
-  
+
   ngOnInit(): void {
     this.initForm();
-   
+
     this.contactInfo = [
       {
         label: 'contact no.',
         icon: 'call',
         descriptionDetails: '+91 98798 67255',
-        routerlink: 'tel:+91 8469499488'
+        routerlink: 'tel:+91 8469499488',
       },
       {
         label: 'mail',
         icon: 'mail',
         descriptionDetails: 'info@JyotiTechnosoft.com',
-        routerlink: 'mailto:hr.webosmotic@gmail.com'
+        routerlink: 'mailto:hr.webosmotic@gmail.com',
       },
       {
         label: 'Address',
         icon: 'location_on',
         descriptionDetails:
           "228, Second Floor, Green Elina, Nr. Sneh Sankul's Vadi, Anand Mahal Rd, Giriraj Society, Adajan, Surat 395009, Gujarat, India",
-        routerlink: ''
+        routerlink: '',
       },
     ];
   }
