@@ -10,6 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { JtTechnologyComponent } from './jt-technology/jt-technology.component';
 
 const materialModule = [
   MatToolbarModule,
@@ -22,7 +23,9 @@ const materialModule = [
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    JtTechnologyComponent
+  ],
   imports: [CommonModule, materialModule, ReactiveFormsModule, FormsModule],
   exports: [
     materialModule,
@@ -30,6 +33,7 @@ const materialModule = [
     RecaptchaModule,
     RecaptchaFormsModule,
     FormsModule,
+    JtTechnologyComponent
   ],
 })
 export class SharedModule {}

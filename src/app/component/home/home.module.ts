@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { SharedModule } from '@app/shared-components/shared.module';
 
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -21,6 +22,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     NgbCarouselModule,
+    SharedModule,
     RouterModule.forChild(routes)
   ],
   exports : [
