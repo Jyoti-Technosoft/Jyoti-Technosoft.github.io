@@ -17,22 +17,29 @@ export class JtTechnologyComponent implements OnInit {
         label: 'FRONTEND',
         lang: [
           {
-            label: 'Angular',
+            label: 'D3',
             imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/D3.svg',
             id: '',
             tooltip: '',
             referenceLink: '',
           },
           {
-            label: 'React',
+            label: 'Angular',
             imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/Angular.svg',
             id: '',
             tooltip: '',
             referenceLink: '',
           },
           {
+            label: 'React',
+            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/React.svg',
+            id: '',
+            tooltip: '',
+            referenceLink: '',
+          },
+          {
             label: 'GWT',
-            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/Jquery.svg',
+            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/GWT.svg',
             id: '',
             tooltip: '',
             referenceLink: '',
@@ -80,33 +87,7 @@ export class JtTechnologyComponent implements OnInit {
       },
     ];
 
-    this.selectedTechnology =  {
-      id: 'frontend',
-      label: 'FRONTEND',
-      lang: [
-        {
-          label: 'Angular',
-          imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/D3.svg',
-          id: '',
-          tooltip: '',
-          referenceLink: '',
-        },
-        {
-          label: 'React',
-          imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/Angular.svg',
-          id: '',
-          tooltip: '',
-          referenceLink: '',
-        },
-        {
-          label: 'GWT',
-          imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/Jquery.svg',
-          id: '',
-          tooltip: '',
-          referenceLink: '',
-        },
-      ],
-    }
+    this.selectedTechnology =  this.technology[0];
   }
   
 
