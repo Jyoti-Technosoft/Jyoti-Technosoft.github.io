@@ -9,8 +9,7 @@ import { BlankComponent } from '@app/layout/blank/blank.component';
 import { FullLayoutComponent } from '@app/layout/full-layout/full-layout.component';
 import { SharedModule } from '@app/shared-components/shared.module';
 import { FooterComponent } from '@app/component/footer/footer.component';
-import { ContactUsComponent } from '@app/component/contact-us/contact-us.component';
-import { ServicesComponent } from '@app/component/services/services.component';
+
 
 @NgModule({
   declarations: [
@@ -19,8 +18,6 @@ import { ServicesComponent } from '@app/component/services/services.component';
     BlankComponent,
     MainHeaderComponent,
     FooterComponent,
-    ContactUsComponent,
-    ServicesComponent,
   ],
   imports: [
     BrowserModule,
