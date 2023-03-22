@@ -10,10 +10,10 @@ import data from "../../../assets/data/jt-website.json"
 export class FooterComponent implements OnInit {
 
   socialMedia = [
-    { label: 'facebook', icon: 'fa-facebook-square', routerlink:"Home" },
-    { label: 'twitter', icon: 'fa-twitter-square', routerlink:"hireUs" },
-    { label: 'instagram', icon: 'fa-instagram', routerlink:"portfolio" },
-    { label: 'linkedin', icon: 'fa-linkedin-square', routerlink:"services" }
+    { label: 'facebook', icon: 'share', routerlink:"Home" },
+    { label: 'twitter', icon: 'share', routerlink:"hireUs" },
+    { label: 'instagram', icon: 'share', routerlink:"portfolio" },
+    { label: 'linkedin', icon: 'share', routerlink:"services" }
   ];
   data:any = {...data};
 
