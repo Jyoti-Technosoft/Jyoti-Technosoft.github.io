@@ -15,3 +15,13 @@ $white-color: #ffffff;
   background-color: $secoundary-color !important;
   color: $white-color !important;
 }
+
+.img-responsive {
+    width: 10vh !important;
+    height: 10vh !important;
+}
+
+
+.tech-name {
+    color: $primary-color;
+}

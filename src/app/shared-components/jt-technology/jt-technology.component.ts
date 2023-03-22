@@ -8,7 +8,7 @@ import { Technology } from './technology';
 })
 export class JtTechnologyComponent implements OnInit {
   technology!: Technology[];
-  selectedTechnology!:any;
+  selectedTechnology!:Technology;
 
   ngOnInit() {
     this.technology = [
@@ -44,6 +44,20 @@ export class JtTechnologyComponent implements OnInit {
             tooltip: '',
             referenceLink: '',
           },
+          {
+            label: 'JAVA',
+            imgSrc: 'assets/images/JA012.png',
+            id: '',
+            tooltip: '',
+            referenceLink: '',
+          },
+          {
+            label: 'DHTML',
+            imgSrc: 'assets/images/html02.png',
+            id: '',
+            tooltip: '',
+            referenceLink: '',
+          },
         ],
       },
       {
@@ -51,8 +65,29 @@ export class JtTechnologyComponent implements OnInit {
         label: 'BACKEND',
         lang: [
           {
-            label: 'Angular',
-            imgSrc: '',
+            label: 'JAVA/J2EE',
+            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/Java.svg',
+            id: '',
+            tooltip: '',
+            referenceLink: '',
+          },
+          {
+            label: 'Node JS',
+            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/Node-js-Express.svg',
+            id: '',
+            tooltip: '',
+            referenceLink: '',
+          },
+          {
+            label: 'LARAVEL',
+            imgSrc: 'https://www.narolainfotech.com/wp-content/uploads/technology_stack/Laravel.svg',
+            id: '',
+            tooltip: '',
+            referenceLink: '',
+          },
+          {
+            label: 'SPRING',
+            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/Spring.svg',
             id: '',
             tooltip: '',
             referenceLink: '',
@@ -64,8 +99,29 @@ export class JtTechnologyComponent implements OnInit {
         label: 'DATABASE',
         lang: [
           {
-            label: 'Angular',
-            imgSrc: '',
+            label: 'MySQL',
+            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/mysql.svg',
+            id: '',
+            tooltip: '',
+            referenceLink: '',
+          },
+          {
+            label: 'Influx',
+            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/influx.svg',
+            id: '',
+            tooltip: '',
+            referenceLink: '',
+          },
+          {
+            label: 'Postgress sql',
+            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/postgress-sql.svg',
+            id: '',
+            tooltip: '',
+            referenceLink: '',
+          },
+          {
+            label: 'MongoDB',
+            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/mongoDB.svg',
             id: '',
             tooltip: '',
             referenceLink: '',
@@ -77,8 +133,8 @@ export class JtTechnologyComponent implements OnInit {
         label: 'MOBILE',
         lang: [
           {
-            label: 'Angular',
-            imgSrc: '',
+            label: 'React Native',
+            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/React.svg',
             id: '',
             tooltip: '',
             referenceLink: '',
