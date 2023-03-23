@@ -21,7 +21,8 @@
             <ng-container *ngIf="item?.subItems?.length">
               <ul class="dropdown-menu">
                 <li class="nav-item" *ngFor="let subItem of item?.subItems">
-                  <a class="nav-link" routerLink="subItem?.routerlink"
+                  <a class="nav-link" routerLink="/{{subItem?.routerlink}}"
+                  [queryParams]="{ tech: subItem?.id}"
                     >{{ subItem?.label }}<i class="bx bx-chevron-right"></i
                   ></a>
                 </li>

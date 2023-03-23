@@ -14,6 +14,7 @@ import { SharedModule } from '@app/shared-components/shared.module';
 import { FooterComponent } from '@app/component/footer/footer.component';
 import { ContactUsComponent } from '@app/component/contact-us/contact-us.component';
 import { ServicesComponent } from '@app/component/services/services.component';
+import { HireDeveloperModule } from '@app/component/hire-developer/hire-developer.module';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ServicesComponent } from '@app/component/services/services.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
+    HireDeveloperModule
   ],
   providers: [],
   bootstrap: [AppComponent],

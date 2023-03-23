@@ -8,7 +8,7 @@ import { Technology } from './technology';
 })
 export class JtTechnologyComponent implements OnInit {
   technology!: Technology[];
-  selectedTechnology!:Technology;
+  selectedTechnology!: Technology;
 
   ngOnInit() {
     this.technology = [
@@ -18,28 +18,28 @@ export class JtTechnologyComponent implements OnInit {
         lang: [
           {
             label: 'D3',
-            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/D3.svg',
+            imgSrc: 'assets/images/D3.svg',
             id: '',
             tooltip: '',
             referenceLink: '',
           },
           {
             label: 'Angular',
-            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/Angular.svg',
+            imgSrc: 'assets/images/Angular.svg',
             id: '',
             tooltip: '',
             referenceLink: '',
           },
           {
             label: 'React',
-            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/React.svg',
+            imgSrc: 'assets/images/React.svg',
             id: '',
             tooltip: '',
             referenceLink: '',
           },
           {
             label: 'GWT',
-            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/GWT.svg',
+            imgSrc: 'assets/images/GWT.svg',
             id: '',
             tooltip: '',
             referenceLink: '',
@@ -66,28 +66,28 @@ export class JtTechnologyComponent implements OnInit {
         lang: [
           {
             label: 'JAVA/J2EE',
-            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/Java.svg',
+            imgSrc: 'assets/images/java.svg',
             id: '',
             tooltip: '',
             referenceLink: '',
           },
           {
             label: 'Node JS',
-            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/Node-js-Express.svg',
+            imgSrc: 'assets/images/nodejs.svg',
             id: '',
             tooltip: '',
             referenceLink: '',
           },
           {
             label: 'LARAVEL',
-            imgSrc: 'https://www.narolainfotech.com/wp-content/uploads/technology_stack/Laravel.svg',
+            imgSrc: 'assets/images/Laravel.svg',
             id: '',
             tooltip: '',
             referenceLink: '',
           },
           {
             label: 'SPRING',
-            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/Spring.svg',
+            imgSrc: 'assets/images/spring.svg',
             id: '',
             tooltip: '',
             referenceLink: '',
@@ -100,28 +100,28 @@ export class JtTechnologyComponent implements OnInit {
         lang: [
           {
             label: 'MySQL',
-            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/mysql.svg',
+            imgSrc: 'assets/images/mysql.svg',
             id: '',
             tooltip: '',
             referenceLink: '',
           },
           {
             label: 'Influx',
-            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/influx.svg',
+            imgSrc: 'assets/images/influx.svg',
             id: '',
             tooltip: '',
             referenceLink: '',
           },
           {
             label: 'Postgress sql',
-            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/postgress-sql.svg',
+            imgSrc: 'assets/images/postgress-sql.svg',
             id: '',
             tooltip: '',
             referenceLink: '',
           },
           {
             label: 'MongoDB',
-            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/mongoDB.svg',
+            imgSrc: 'assets/images/mongoDB.svg',
             id: '',
             tooltip: '',
             referenceLink: '',
@@ -134,7 +134,7 @@ export class JtTechnologyComponent implements OnInit {
         lang: [
           {
             label: 'React Native',
-            imgSrc: 'https://webosmotic.com/wp-content/uploads/2022/06/React.svg',
+            imgSrc: 'assets/images/React.svg',
             id: '',
             tooltip: '',
             referenceLink: '',
@@ -143,9 +143,8 @@ export class JtTechnologyComponent implements OnInit {
       },
     ];
 
-    this.selectedTechnology =  this.technology[0];
+    this.selectedTechnology = this.technology[0];
   }
-  
 
   onChange(selectedTechnology) {
     this.selectedTechnology = selectedTechnology;

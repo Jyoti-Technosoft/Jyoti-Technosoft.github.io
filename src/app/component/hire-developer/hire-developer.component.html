@@ -1,0 +1,35 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-6 px-0">
+      <img class="img-responsive" src="assets/images/angular.png" alt="logo" />
+    </div>
+    <div class="col-md-6 p-5 m-auto">
+      <h1>Angular Developement</h1>
+      <p>
+       {{technologyInfo?.decription}}
+      </p>
+      <a class="btn btn-outline-secondary"  [routerLink]="['../', 'contact-us']">Contact us</a>
+    </div>
+  </div>
+
+  <div class="row mt-5 justify-content: space-between">
+    <mat-card class="card mb-5" *ngFor="let data of technologyInfo?.services">
+      <mat-card-header>
+        <div
+          mat-card-avatar
+          class="example-header-image"
+          
+          [style]="{backgroundImage: 'url(' + data.icon + ')'}"
+        ></div>
+        <mat-card-title>
+          <h3>{{data.header}}</h3>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          {{data?.decription}}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

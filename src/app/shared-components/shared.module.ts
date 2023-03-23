@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { JtTechnologyComponent } from './jt-technology/jt-technology.component';
+import { RouterModule } from '@angular/router';
 
 const materialModule = [
   MatToolbarModule,
@@ -23,9 +24,7 @@ const materialModule = [
 ];
 
 @NgModule({
-  declarations: [
-    JtTechnologyComponent
-  ],
+  declarations: [JtTechnologyComponent],
   imports: [CommonModule, materialModule, ReactiveFormsModule, FormsModule],
   exports: [
     materialModule,
@@ -33,7 +32,8 @@ const materialModule = [
     RecaptchaModule,
     RecaptchaFormsModule,
     FormsModule,
-    JtTechnologyComponent
+    JtTechnologyComponent,
+    RouterModule,
   ],
 })
 export class SharedModule {}
