@@ -17,6 +17,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('@app/component/home/home.module').then((m) => m.HomeModule),
       },
+      {
+        path:'career',
+        loadChildren: () => 
+          import('@app/component/career/career.module').then((m) => m.CareerModule),
+      },
       { path: 'about', component: BlankComponent },
       { path: 'contact-us', component: ContactUsComponent },
       { path: 'services', component: ServicesComponent },

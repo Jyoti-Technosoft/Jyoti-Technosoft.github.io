@@ -28,9 +28,9 @@ import { ServicesComponent } from '@app/component/services/services.component';
   imports: [
     BrowserModule,
     RouterModule,
-    AppRoutingModule,
     SharedModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
     NgbModule,
   ],
   providers: [],

@@ -1,12 +1,12 @@
 import { Component, OnInit, HostListener, Renderer2, ViewChild, ElementRef } from '@angular/core';
-
+import { Icons } from "@app/shared-components/shared-interface/Icons" 
 @Component({
   selector: 'app-main-header',
   templateUrl: './main-header.component.html',
   styleUrls: ['./main-header.component.scss'],
 })
 export class MainHeaderComponent implements OnInit {
-  menuItems = [
+  menuItems: Icons[] = [
     { label: 'Home', icon: 'pi pi-fw pi-plus', routerlink: 'home' },
     {
       label: 'Hire a Developer',

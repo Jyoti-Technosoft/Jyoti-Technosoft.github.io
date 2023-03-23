@@ -1,0 +1,27 @@
+$secoundary-color: #a3c742;
+$primary-color: #3a7dc8;
+$white-color: #ffffff;
+
+.tech-btn {
+  border: none;
+}
+
+.text-color {
+  color: $secoundary-color !important;
+  background-color: $white-color;
+}
+
+.tech-btn.active {
+  background-color: $secoundary-color !important;
+  color: $white-color !important;
+}
+
+.img-responsive {
+    width: 10vh !important;
+    height: 10vh !important;
+}
+
+
+.tech-name {
+    color: $primary-color;
+}
