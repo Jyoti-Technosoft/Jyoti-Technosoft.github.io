@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HireDeveloperComponent } from '@app/component/hire-developer/hire-developer.component';
 import { SharedModule } from '@app/shared-components/shared.module';
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
@@ -14,11 +14,12 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    HireDeveloperComponent,
+    HireDeveloperComponent
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    RouterModule.forChild(routes)
   ]
 })
 export class HireDeveloperModule { }
