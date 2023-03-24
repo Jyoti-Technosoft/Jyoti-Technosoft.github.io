@@ -14,8 +14,8 @@ export class MainHeaderComponent implements OnInit {
       routerlink: 'hire-us',
       subItems: [
         { id:'angular', label: 'Hire Angular Developer', routerlink: 'hire-us' },
-        { id: 'react', label: 'Hire Java Developer', routerlink: 'hire-us' },
-        { id: 'codeIgnator', label: 'Hire CodeIgnator Developer ', routerlink: 'hire-us' },
+        { id: 'react', label: 'Hire React Developer', routerlink: 'hire-us' },
+        { id: 'java', label: 'Hire JAVA Developer ', routerlink: 'hire-us' },
       ],
     },
     {

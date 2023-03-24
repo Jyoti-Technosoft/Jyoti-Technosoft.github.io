@@ -1,31 +1,56 @@
 .footer {
-    position: relative;
-    bottom: 0;
-    width: auto;
-    height: auto; /* Set the fixed height of the footer here */
-    line-height: 60px; /* Vertically center the text there */
-  }
+  position: relative;
+  bottom: 0;
+  width: auto;
+  height: auto; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+}
 
-  h4 {
-    font-size: 18px;
-    font-weight: 400;
-  }
+h4 {
+  font-size: 18px;
+  font-weight: 400;
+}
 
-  h6 {
-    font-size: 16px;
-    color: #fff;
-    line-height: 30px;
-    font-weight: 400;
-  }
+h6 {
+  font-size: 16px;
+  color: #fff;
+  line-height: 30px;
+  font-weight: 400;
+}
 
-  .w-5 {
-    width: 25px;
-  }
+.w-5 {
+  width: 25px;
+}
 
-  .icon-size {
-    font-size: 40px;
-  }
+.icon-size {
+  font-size: 40px;
+}
 
-  .h-6 {
-    height: 42px;
-  }
+.h-6 {
+  height: 42px;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  color: #ffffff !important;
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  pointer-events: auto;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

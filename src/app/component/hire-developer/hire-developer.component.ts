@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import data from "../../../assets/data/jt-website.json"
 
 @Component({
@@ -9,10 +10,14 @@ import data from "../../../assets/data/jt-website.json"
 export class HireDeveloperComponent implements OnInit {
   data:any = {...data};
   technologyInfo: any;
-  constructor() {}
+  
+  constructor(private activateRoute:ActivatedRoute) {}
+
   ngOnInit() {
     this.technologyInfo = this.data?.hireUs.technology[2];
-    console.log(this.data?.hireUs.technology[1])
+    this.activateRoute.queryParams.subscribe((selectedTechnology:any) => {
+    this.technologyInfo = this.data.hireUs.technology.find((technology) => technology?.id === selectedTechnology?.tech)
+    })
   }
 
 }
