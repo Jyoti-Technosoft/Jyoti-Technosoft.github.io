@@ -3,9 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ContactUsComponent } from '@app/component/contact-us/contact-us.component';
 import { ServicesComponent } from '@app/component/services/services.component';
-import { BlankComponent } from '@app/layout/blank/blank.component';
 import { FullLayoutComponent } from '@app/layout/full-layout/full-layout.component';
-
 const routes: Routes = [
   {
     path: '',
@@ -22,7 +20,11 @@ const routes: Routes = [
         loadChildren: () => 
           import('@app/component/career/career.module').then((m) => m.CareerModule),
       },
-      { path: 'about', component: BlankComponent },
+      {
+        path:'hire-us',
+        loadChildren: () => 
+          import('@app/component/hire-developer/hire-developer.module').then((m) => m.HireDeveloperModule),
+      },
       { path: 'contact-us', component: ContactUsComponent },
       { path: 'services', component: ServicesComponent },
     ]

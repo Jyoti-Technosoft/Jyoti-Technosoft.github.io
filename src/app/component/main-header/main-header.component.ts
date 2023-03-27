@@ -11,11 +11,11 @@ export class MainHeaderComponent implements OnInit {
     {
       label: 'Hire a Developer',
       icon: 'pi pi-fw pi-download',
-      routerlink: 'hireUs',
+      routerlink: 'hire-us',
       subItems: [
-        { label: 'Hire Angular Developer', routerlink: 'hireus' },
-        { label: 'Hire Java Developer', routerlink: 'hireus' },
-        { label: 'Hire CodeIgnator Developer ', routerlink: 'hireus' },
+        { id:'angular', label: 'Hire Angular Developer', routerlink: 'hire-us' },
+        { id: 'react', label: 'Hire React Developer', routerlink: 'hire-us' },
+        { id: 'java', label: 'Hire JAVA Developer ', routerlink: 'hire-us' },
       ],
     },
     {

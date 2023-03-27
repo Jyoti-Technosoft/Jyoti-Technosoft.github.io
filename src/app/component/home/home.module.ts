@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '@app/shared-components/shared.module';
 
-import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { HomeComponent } from './home.component';
@@ -21,7 +20,6 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    NgbCarouselModule,
     SharedModule,
     RouterModule.forChild(routes)
   ],

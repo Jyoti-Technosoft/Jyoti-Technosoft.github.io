@@ -11,6 +11,9 @@ import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { JtTechnologyComponent } from './jt-technology/jt-technology.component';
+import { ClientReviewComponent } from './client-review/client-review.component';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 const materialModule = [
   MatToolbarModule,
@@ -20,12 +23,11 @@ const materialModule = [
   MatCardModule,
   MatSelectModule,
   DragDropModule,
+  NgbCarouselModule,
 ];
 
 @NgModule({
-  declarations: [
-    JtTechnologyComponent
-  ],
+  declarations: [JtTechnologyComponent, ClientReviewComponent],
   imports: [CommonModule, materialModule, ReactiveFormsModule, FormsModule],
   exports: [
     materialModule,
@@ -33,7 +35,8 @@ const materialModule = [
     RecaptchaModule,
     RecaptchaFormsModule,
     FormsModule,
-    JtTechnologyComponent
+    JtTechnologyComponent,
+    ClientReviewComponent
   ],
 })
 export class SharedModule {}
