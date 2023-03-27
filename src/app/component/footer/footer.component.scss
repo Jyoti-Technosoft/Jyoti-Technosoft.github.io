@@ -1,3 +1,5 @@
+$color-white: #ffffff;
+
 .footer {
   position: relative;
   bottom: 0;
@@ -13,7 +15,7 @@ h4 {
 
 h6 {
   font-size: 16px;
-  color: #fff;
+  color: $color-white;
   line-height: 30px;
   font-weight: 400;
 }
@@ -37,14 +39,14 @@ h6 {
 
 .hover-underline-animation::after {
   content: "";
-  color: #ffffff !important;
+  color: $color-white !important;
   position: absolute;
   width: 100%;
   transform: scaleX(0);
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #ffffff;
+  background-color: $color-white;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
   pointer-events: auto;

@@ -1,0 +1,83 @@
+.example-header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+
+.review-card {
+  box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  max-width: 400px;
+  border-radius: 25px !important;
+
+  &.mat-mdc-card {
+    .mat-mdc-card-header {
+      display: flex;
+      padding: 16px 16px 0;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+
+      .mat-mdc-card-title {
+        font-size: 24px;
+        font-weight: 450;
+      }
+
+      .mat-mdc-card-header-text {
+        background-image: url("../../../assets/images/review-quotes.png") !important;
+        background-size: 60px 60px;
+        background-repeat: no-repeat;
+        display: flex;
+
+        .mat-mdc-card-title {
+          text-align: center;
+          justify-content: flex-end;
+          display: flex;
+          margin: auto;
+        }
+      }
+
+      .mat-mdc-card-avatar {
+        height: 55px;
+        width: 55px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-bottom: 16px;
+        object-fit: cover;
+        border: 5px solid rgb(163, 199, 66);
+      }
+    }
+  }
+}
+
+.overflow {
+  overflow: overlay;
+}
+
+.example-button-container {
+  height: 4rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+
+.mat-icon {
+  margin-top: 7px;
+  margin-left: 8px;
+}
+
+
+.btn-scroll {
+  border-radius: 50% !important;
+  border:none;
+  background-color: #ffffff;
+  height: 45px;
+  width: 45px;
+}
+
+
+.align-item-center {
+  width: auto;
+  align-items: center;
+  display: flex;
+}
