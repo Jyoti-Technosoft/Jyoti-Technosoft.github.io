@@ -29,8 +29,8 @@ $color_2: #367dc8;
     min-height: 500px;
     transition: 0.7s;
     &:hover {
-      background: #e1e5f8;
       transform: scale(1.1);
+      border-radius: none !important;
       z-index: 9;
       &::before {
         background: rgb(85 108 214 / 10%);
@@ -72,20 +72,20 @@ $color_2: #367dc8;
         color: #615e5f !important;
       }
     }
-    .card_description {
-      button {
-        border: 0;
-        border-radius: 15px;
-        background: linear-gradient(
-          140deg,
-          #99c122 0%,
-          #99c122 50%,
-          #99c122 75%
-        ) !important;
-        font-weight: 500;
-        font-size: 1rem;
-        padding: 5px 16px;
-      }
+  }
+  .card_description {
+    .read_more_btn {
+      border: 0;
+      border-radius: 15px;
+      background: linear-gradient(
+        140deg,
+        #99c122 0%,
+        #99c122 50%,
+        #99c122 75%
+      ) !important;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 5px 16px;
     }
   }
 }
@@ -250,7 +250,7 @@ $color_2: #367dc8;
       transition: 0.5s;
       color: #000000;
       &:after {
-        width: 10%;
+        display: none;
       }
     }
   }
@@ -261,15 +261,19 @@ $color_2: #367dc8;
   margin: 0;
   padding: 1.7rem 1.2rem;
   border-radius: 0;
+  border: none !important;
   color: rgba(0, 0, 0, 1);
   border-radius: 12px;
   letter-spacing: 0.05rem;
   font-family: "Oswald", sans-serif;
-  box-shadow: 0 0 21px rgba(0, 0, 0, 0.27);
+  box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
+    0 5px 15px 0 rgba(37, 44, 97, 0.15);
   transition: 0.5s;
   &:hover {
     border-radius: 0px;
     transition: 0.8s;
+    transform: scale(1);
+    background: #e1e5f8;
   }
   .txt {
     margin-left: 5rem;

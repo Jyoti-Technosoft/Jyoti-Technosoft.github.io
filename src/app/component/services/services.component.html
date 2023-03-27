@@ -1,47 +1,77 @@
 <div class="container mt-5 pt-5">
-    <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="section-headline text-center">
-                <h3>Our services</h3>
-                <p>We help agencies to define their new business objectives and then create the road map</p>
-            </div>
-        </div>
+  <!-- <div class="row">
+    <div class="col-6">
+      <img
+        src="assets/images/services1.gif"
+        class="img-fluid service-image"
+        alt="services"
+      />
     </div>
-    <div class="row">
-        <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let item of services">
-            <div class="single-service wow fadeInUp hover-animation max-height" data-wow-delay="0.3s">
-                <div class="service-icon">
-                    <mat-icon class="icon">
-                        <span class="material-symbols-outlined">
-                            android
-                        </span>
-                    </mat-icon>
-                </div>
-                <div class="service-inner">
-                    <div class="service-content">
-                        <h4>{{item?.name }}</h4>
-                        <p>{{item?.description}}</p>
-                        <a class="service-btn" href="#"><i class="ti-arrow-right"></i></a>
-                        <mat-icon class="icon">
-                            <span class="material-symbols-outlined">
-                                arrow_forward
-                            </span>
-                        </mat-icon>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="col-6">
+      <img
+        src="assets/images/services1.gif"
+        class="img-fluid service-image"
+        alt="services"
+      />
     </div>
-            <div class="row fun-text-all">
-                <div class="col-md-3 col-sm-6 col-xs-12" *ngFor="let item of projectReports">
-                    <div class="fun_text wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                       <span class="counter-icon">
-                        <mat-icon class="service-icons">
-                            <span class="material-symbols-outlined">{{item?.icons}} </span>
-                        </mat-icon>
-                       </span>
-                        <h4 class="counter">{{item?.totals}}</h4>
-                        <h4>{{item?.label}}</h4>
-                    </div>
-                </div>
+  </div> -->
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="section-headline  section-title text-center">
+        <h2>Services</h2>
+        <p>
+          We help agencies to define their new business objectives and then
+          create the road map
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let item of services">
+      <div
+        class="single-service wow fadeInUp hover-animation max-height"
+        data-wow-delay="0.3s"
+      >
+        <div class="service-icon">
+          <mat-icon class="icon">
+            <span class="material-symbols-outlined"> android </span>
+          </mat-icon>
+        </div>
+        <div class="service-inner">
+          <div class="service-content">
+            <h4>{{ item?.name }}</h4>
+            <p>{{ item?.description }}</p>
+            <a class="service-btn" ><i class="ti-arrow-right"></i></a>
+            <mat-icon class="icon">
+              <span class="material-symbols-outlined"> arrow_forward </span>
+            </mat-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row fun-text-all">
+    <div
+      class="col-md-3 col-sm-6 col-xs-12"
+      *ngFor="let item of projectReports"
+    >
+      <div
+        class="fun_text wow fadeInUp"
+        data-wow-delay="0.2s"
+        style="
+          visibility: visible;
+          animation-delay: 0.2s;
+          animation-name: fadeInUp;
+        "
+      >
+        <span class="counter-icon">
+          <mat-icon class="service-icons">
+            <span class="material-symbols-outlined">{{ item?.icons }} </span>
+          </mat-icon>
+        </span>
+        <h4 class="counter">{{ item?.totals }}</h4>
+        <h4>{{ item?.label }}</h4>
+      </div>
+    </div>
+  </div>
 </div>
