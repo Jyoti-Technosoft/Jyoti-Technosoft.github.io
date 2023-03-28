@@ -8,65 +8,35 @@
         get it right
       </p>
     </div>
-    <div class="row px-0">
-      <div class="align-item-center">
-          <button class="btn-scroll"
-            mat-fab
-            color="primary"
-            aria-label="Example icon button with a delete icon"
+    <div class="row px-0 d-flex">
+      <div class="col px-0">
+        <ngb-carousel [showNavigationArrows]="false" 	[interval]="0" (slide)="onSlide($event)">
+          <ng-container
+            *ngFor="let review of counter; let indexOfelement = index"
           >
-            <mat-icon
-              ><span class="material-symbols-outlined">
-                arrow_back_ios
-              </span></mat-icon
-            >
-          </button>
-        </div>
-      <div class="col d-flex px-0 overflow">
-          <mat-card
-            class="review-card my-5 col-lg-4 col-md-5 col-12 mx-2"
-            *ngFor="let item of reviewItem"
-          >
-            <mat-card-header>
-              <mat-card-title>Rakesh Sharma {{item}}</mat-card-title>
-              <div mat-card-avatar class="example-header-image"></div>
-            </mat-card-header>
-            <mat-card-content>
-              <p>
-                The Shiba Inu is the smallest of the six original and distinct
-                spitz breeds of dog from Japan. A small, agile dog that copes very
-                well with mountainous terrain, the Shiba Inu was originally bred
-                for hunting.
-              </p>
-            </mat-card-content>
-          </mat-card>
-
-        <!-- <div class="example-button-container">
-          <button class="btn-scroll"
-            mat-fab
-            color="primary"
-            aria-label="Example icon button with a delete icon"
-          >
-            <mat-icon
-              ><span class="material-symbols-outlined">
-                  arrow_forward_ios
-              </span></mat-icon
-            >
-          </button>
-        </div> -->
-      </div>
-      <div class="align-item-center">
-        <button class="btn-scroll"
-          mat-fab
-          color="primary"
-          aria-label="Example icon button with a delete icon"
-        >
-        <mat-icon
-        ><span class="material-symbols-outlined">
-            arrow_forward_ios
-        </span></mat-icon
-      >
-        </button>
+            <ng-template ngbSlide  [id]="indexOfelement.toString()">
+              <div class="d-flex justify-content-center">
+                <mat-card
+                  class="review-card my-5 col-lg-5 col-md-6 col-12 px-0"
+                  *ngFor="let item of reviewItem |  slice: (indexOfelement*cardPerPage) : (indexOfelement*cardPerPage) + cardPerPage"
+                >
+                  <mat-card-header>
+                    <mat-card-title>Rakesh Sharma {{ item }}</mat-card-title>
+                    <div mat-card-avatar class="example-header-image"></div>
+                  </mat-card-header>
+                  <mat-card-content>
+                    <p>
+                      The Shiba Inu is the smallest of the six original and
+                      distinct spitz breeds of dog from Japan. A small, agile
+                      dog that copes very well with mountainous terrain, the
+                      Shiba Inu was originally bred for hunting.
+                    </p>
+                  </mat-card-content>
+                </mat-card>
+              </div>
+            </ng-template>
+          </ng-container>
+        </ngb-carousel>
       </div>
     </div>
   </div>
