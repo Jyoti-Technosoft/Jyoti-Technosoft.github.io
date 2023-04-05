@@ -10,10 +10,10 @@ import { Icons } from '@app/shared-components/shared-interface/Icons';
 export class FooterComponent implements OnInit {
 
   socialMedia: Icons[] = [
-    { label: 'facebook', icon: 'fa-facebook-square', routerlink:"Home" },
-    { label: 'twitter', icon: 'fa-twitter-square', routerlink:"hireUs" },
-    { label: 'instagram', icon: 'fa-instagram', routerlink:"portfolio" },
-    { label: 'linkedin', icon: 'fa-linkedin-square', routerlink:"services" }
+    { label: 'facebook', icon: 'bi-facebook', routerlink:"Home" },
+    { label: 'twitter', icon: 'bi-twitter', routerlink:"hireUs" },
+    { label: 'instagram', icon: 'bi-instagram', routerlink:"portfolio" },
+    { label: 'linkedin', icon: 'bi-linkedin', routerlink:"services" }
   ];
   data:any = {...data};
 
