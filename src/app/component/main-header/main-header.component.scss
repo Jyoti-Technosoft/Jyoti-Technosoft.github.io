@@ -1,7 +1,8 @@
 .in {
   transition: all 0.4s;
   background: #ffff !important;
-  box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2), 0 20px 14px 0 rgba(37, 44, 97, 0.15)
+  box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
+    0 20px 14px 0 rgba(37, 44, 97, 0.15);
 }
 .heder-container {
   z-index: 997;
@@ -61,7 +62,7 @@
     white-space: nowrap;
     transition: 0.3s;
     font-weight: 500;
-    color: #4a6f8a ;
+    color: #4a6f8a;
     &:focus {
       display: flex;
       align-items: center;
@@ -163,9 +164,10 @@
   line-height: 0;
   transition: 0.5s;
 }
-.mobile-nav-toggle.bi-x {
-  color: #fff;
+.mobile-nav-toggle-close {
+  display: none;
 }
+
 .navbar-mobile {
   position: fixed;
   overflow: hidden;
@@ -173,10 +175,15 @@
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(9, 9, 9, 0.9);
+  background: rgba(9, 9, 9, 1);
   transition: 0.3s;
   z-index: 999;
   .mobile-nav-toggle {
+    display: block !important;
+  }
+  .mobile-nav-toggle-close {
+    color: #ffff;
+    display: block !important;
     position: absolute;
     top: 15px;
     right: 15px;

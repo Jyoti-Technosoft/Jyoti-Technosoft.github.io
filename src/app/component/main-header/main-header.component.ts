@@ -39,13 +39,12 @@ export class MainHeaderComponent implements OnInit {
     { label: 'Career', icon: 'pi pi-fw pi-refresh', routerlink: 'career' },
   ];
 
-  @ViewChild('mainNavbar') navbar: any;
+  @ViewChild('mainNavbar') navbar!: ElementRef;
   @ViewChild('navBarMobile') navBarMobile!: ElementRef;
 
-
   constructor(private renderer: Renderer2) {}
+
   ngOnInit() {}
-  
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
@@ -58,7 +57,13 @@ export class MainHeaderComponent implements OnInit {
   }
 
   showHeader() {
-    this.renderer.addClass(this.navBarMobile.nativeElement, 'navbar-mobile');
-
+    if (this.navBarMobile.nativeElement.classList.contains('navbar-mobile')) {
+      this.renderer.removeClass(
+        this.navBarMobile.nativeElement,
+        'navbar-mobile'
+      );
+    } else {
+      this.renderer.addClass(this.navBarMobile.nativeElement, 'navbar-mobile');
+    }
   }
 }
