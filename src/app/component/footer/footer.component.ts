@@ -25,7 +25,7 @@ export class FooterComponent implements OnInit {
 
   ngOnInit() {
     this.mainHeader = Object.keys(data?.footer?.title)
-    this.copyright = this.data.footer.copyright;
+    this.copyright = data.footer.copyright;
   }
 
   selectMenuItem(name:string) {
