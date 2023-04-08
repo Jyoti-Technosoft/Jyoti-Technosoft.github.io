@@ -21,10 +21,15 @@ export class FooterComponent implements OnInit {
   mainHeader!:any;
   subtitle:any = [];
   copyright!: any;
+  selectedDropwn:{} = {};
 
   ngOnInit() {
     this.mainHeader = Object.keys(data?.footer?.title)
     this.copyright = this.data.footer.copyright;
   }
 
+  selectMenuItem(name:string) {
+    this.selectedDropwn[name] = !this.selectedDropwn[name] ;
+    
+  }
 }
