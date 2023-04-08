@@ -1,5 +1,12 @@
-import { Component, OnInit, HostListener, Renderer2, ViewChild, ElementRef } from '@angular/core';
-import { Icons } from "@app/shared-components/shared-interface/Icons" 
+import {
+  Component,
+  OnInit,
+  HostListener,
+  Renderer2,
+  ViewChild,
+  ElementRef,
+} from '@angular/core';
+import { Icons } from '@app/shared-components/shared-interface/Icons';
 @Component({
   selector: 'app-main-header',
   templateUrl: './main-header.component.html',
@@ -13,7 +20,11 @@ export class MainHeaderComponent implements OnInit {
       icon: 'pi pi-fw pi-download',
       routerlink: 'hire-us',
       subItems: [
-        { id:'angular', label: 'Hire Angular Developer', routerlink: 'hire-us' },
+        {
+          id: 'angular',
+          label: 'Hire Angular Developer',
+          routerlink: 'hire-us',
+        },
         { id: 'react', label: 'Hire React Developer', routerlink: 'hire-us' },
         { id: 'java', label: 'Hire JAVA Developer ', routerlink: 'hire-us' },
       ],
@@ -28,19 +39,31 @@ export class MainHeaderComponent implements OnInit {
     { label: 'Career', icon: 'pi pi-fw pi-refresh', routerlink: 'career' },
   ];
 
- @ViewChild("mainNavbar") navbar: any
- 
+  @ViewChild('mainNavbar') navbar!: ElementRef;
+  @ViewChild('navBarMobile') navBarMobile!: ElementRef;
+
   constructor(private renderer: Renderer2) {}
+
   ngOnInit() {}
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    let element = document.querySelector('.navbar-area') as HTMLElement;
+    let element = document.querySelector('.heder-container') as HTMLElement;
     if (window.pageYOffset > element.clientHeight) {
-      this.renderer.addClass(this.navbar.nativeElement, 'navbar-inverse');
+      this.renderer.addClass(this.navbar.nativeElement, 'in');
     } else {
-      element.classList.remove('navbar-inverse');
+      element.classList.remove('in');
     }
   }
 
+  showHeader() {
+    if (this.navBarMobile.nativeElement.classList.contains('navbar-mobile')) {
+      this.renderer.removeClass(
+        this.navBarMobile.nativeElement,
+        'navbar-mobile'
+      );
+    } else {
+      this.renderer.addClass(this.navBarMobile.nativeElement, 'navbar-mobile');
+    }
+  }
 }
