@@ -5,7 +5,7 @@ $color-white: #ffffff;
   bottom: 0;
   width: auto;
   height: auto; /* Set the fixed height of the footer here */
-  line-height: 60px; /* Vertically center the text there */
+  // line-height: 60px; /* Vertically center the text there */
 }
 
 h4 {
@@ -55,4 +55,27 @@ h6 {
 .hover-underline-animation:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.footer-item-list {
+  &.sm-view {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .border-bottom {
+    border-bottom: 2px solid #7c7676;
+  }
+
+  .inner-content {
+    font-weight: 250;
+  }
+
+  .footer-item-list {
+    display: none;
+    &.sm-view {
+      display: block;
+    }
+  }
 }

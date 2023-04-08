@@ -34,7 +34,7 @@
         </div>
       </div>
     </div>
-    <div class="col-12 col-lg-7 col-md-7 px-5 pt-5">
+    <div class="contact-form-inner-wrapper col-12 col-lg-7 col-md-7 px-5 pt-5">
       <h5 class="text-size">
         Fill up the form and our Team will get back to you within 24 hours.
       </h5>
@@ -83,7 +83,7 @@
               <mat-label>Mobile No. </mat-label>
               <input
                 class="col-12"
-                type="text"
+                type="tel"
                 matInput
                 formControlName="mobileNo"
                 placeholder="Phone Number"
@@ -114,6 +114,7 @@
                 matInput
                 placeholder="Write you Message"
                 rows="5"
+                formControlName="description"
               ></textarea>
             </mat-form-field>
           </div>
@@ -131,9 +132,10 @@
           <div class="col-12 mb-3 d-flex justify-content-end">
             <button
               mat-flat-button
-              class="contact-submit-btn"
+              class="contact-submit-btn cursor-pointer"
               color="accent"
-              [disabled]="!this.contactUsForm.valid"
+              [class.enable-btn]="contactUsForm.valid"
+              [disabled]="!contactUsForm.valid"
             >
               Submit
             </button>

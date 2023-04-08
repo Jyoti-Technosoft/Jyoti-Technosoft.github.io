@@ -1,5 +1,8 @@
+$color_1 : #ffffff;
+$color_2 : #d9dee1;
+
 .contact-form-block {
-  background-color: #ffffff;
+  background-color: $color_1;
   position: relative;
   height: 100%;
   display: flex;
@@ -21,7 +24,7 @@
 }
 
 .contact-form-wrapper {
-  background-color: #ffffff;
+  background-color: $color_1;
   border-radius: 20px;
 }
 
@@ -35,12 +38,12 @@
 
 .mat-focused {
   .mat-mdc-form-field-focus-overlay {
-    background-color: chartreuse;
+    background-color: $color_2;
   }
 }
 
 .mat-mdc-text-field-wrapper {
-  background-color: #ffff !important;
+  background-color: $color_1 !important;
 }
 
 .icon {
@@ -77,5 +80,28 @@
 .contact-submit-btn {
   width: 150px;
   height: 45px;
-  border-radius: 8px;
+  border: none;
+  border-radius: 10px;
+  background-color: #d1e3a2;
+
+  &.enable-btn {
+    background-color: #a3c742;
+    color: $color_1; 
+  }
+}
+
+
+@media (max-width: 840px) {
+  .contact-form-wrapper {
+    width: 90%;
+    .contact-form-inner-wrapper {
+      padding: 0 !important;
+      margin-top: 26px;
+    }
+    .contact-form-block {
+      border-right: none;
+      padding: 0 !important;
+      border-bottom: 2px solid;
+    }
+  }
 }

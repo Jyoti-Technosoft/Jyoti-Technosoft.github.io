@@ -58,12 +58,12 @@ export class ContactUsComponent implements OnInit {
       firstName: ['', Validators.required],
       lastName: [''],
       emailAddress: ['', Validators.email],
-      subject: ['', [Validators.required, Validators.maxLength(30)]],
+      subject: ['', Validators.compose([Validators.required, Validators.maxLength(30)])],
       mobileNo: [
         '',
-        Validators.required,
-        Validators.minLength(10),
-        Validators.maxLength(13),
+        Validators.compose([Validators.required,
+          Validators.minLength(10),
+          Validators.maxLength(13)])
       ],
       description: ['', [Validators.required, Validators.maxLength(250)]],
       recaptcha: ['', Validators.required],
