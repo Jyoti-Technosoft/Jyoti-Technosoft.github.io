@@ -34,8 +34,8 @@
         </div>
         <div class="row footer-item-list sm-view">
           <div
-            class="col-12 border-bottom mb-0 px-2 py-2"
-            *ngFor="let item of mainHeader; index as i"
+            class="col-12  mb-0 px-2 py-2"
+            *ngFor="let item of mainHeader; index as j" [class.border-bottom]="j < (mainHeader?.length - 1)"
           >
             <h4 class="mb-0 d-flex justify-content-between">
               <span>

@@ -78,7 +78,7 @@ export class CareerComponent implements OnInit {
       ],
     },
     {
-      position: { label: 'Angular JS Developer', id: 'react' },
+      position: { label: 'Angular JS Developer', id: 'angular' },
       experience: 'Exp. 1.6 Years minimum',
       requireLang: ['React JS', 'Bootstrap', 'CSS', 'Javascript', 'Web Pack'],
       role: [
@@ -145,7 +145,7 @@ export class CareerComponent implements OnInit {
       ],
     },
     {
-      position: { label: 'Node JS Developer', id: 'react' },
+      position: { label: 'Node JS Developer', id: 'nodejs' },
       experience: 'Exp. 1.6 Years minimum',
       requireLang: ['React JS', 'Bootstrap', 'CSS', 'Javascript', 'Web Pack'],
       role: [
@@ -212,7 +212,7 @@ export class CareerComponent implements OnInit {
       ],
     },
     {
-      position: { label: 'Vue Js Developer', id: 'react' },
+      position: { label: 'Vue Js Developer', id: 'vuejs' },
       experience: 'Exp. 1.6 Years minimum',
       requireLang: ['React JS', 'Bootstrap', 'CSS', 'Javascript', 'Web Pack'],
       role: [

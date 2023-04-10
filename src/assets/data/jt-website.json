@@ -264,5 +264,35 @@
         }
       ]
     }
-  ]
+  ],
+  "developmentProcess": {
+    "header": "Development Process",
+    "subHeader": "Converting an idea into reality requires domain knowledge, efficiency and understanding. We offer custom software development services. Let’s shake hands and see how we can add more value to your business.",
+    "processStep": [
+      {
+        "index": 1,
+        "title": "Receive Client Requirement and understanding them Process",
+        "description": "Why I say old chap that is, spiffing jolly good a load of old tosh spend a penny tosser arse over tit, excuse my French owt to do with me up the kyver matie boy.",
+        "imageSrc": "assets/images/workflowStep1.svg"
+      },
+      {
+        "index": 2,
+        "title": "Collect Information and Analysis Client Requirement",
+        "description": "Why I say old chap that is, spiffing jolly good a load of old tosh spend a penny tosser arse over tit, excuse my French owt to do with me up the kyver matie boy.",
+        "imageSrc": "assets/images/workflowStep2.svg"
+      },
+      {
+        "index": 3,
+        "title": "We go to Sketch/Wireframe to mapping a Design",
+        "description": "Why I say old chap that is, spiffing jolly good a load of old tosh spend a penny tosser arse over tit, excuse my French owt to do with me up the kyver matie boy.",
+        "imageSrc": "assets/images/workflowStep3.svg"
+      },
+      {
+        "index": 4,
+        "title": "Finally All Process We do Implement",
+        "description": "Why I say old chap that is, spiffing jolly good a load of old tosh spend a penny tosser arse over tit, excuse my French owt to do with me up the kyver matie boy.",
+        "imageSrc": "assets/images/workflowStep4.svg"
+      }
+    ]
+  }
 }

@@ -65,9 +65,10 @@
     <div class="careers-skills-block col-12 d-flex mb-5">
       <div class="col-3 py-0">
         <mat-card
-          class="careers-items-list filter-job-results mt-4"
+          class="careers-items-list filter-job-results"
           *ngFor="let careersItem of filterCareer"
           (click)="onSelect(careersItem)"
+          [class.selected-career]="careersItem?.position?.id == selectedCareer?.position?.id"
         >
           <mat-card-header>
             <mat-card-title class="header-title">{{
@@ -79,9 +80,9 @@
           }}</mat-card-content>
         </mat-card>
       </div>
-      <div class="careers-content-block col-9 mx-3">
+      <div class="careers-content-block col-9">
         <mat-card
-          class="careers-items-list filter-job-results mt-4 fit-content mx-3 w-100"
+          class="careers-items-list filter-job-results fit-content w-100"
         >
           <mat-card-header>
             <mat-card-title class="header-title detail-view">{{

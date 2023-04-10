@@ -6,7 +6,9 @@ import { SharedModule } from '@app/shared-components/shared.module';
 
 
 import { HomeComponent } from './home.component';
+import { WorkFlowComponent } from '@app/work-flow/work-flow.component';
 
+WorkFlowComponent
 const routes: Routes = [
   {
     path: '',
@@ -16,7 +18,8 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    WorkFlowComponent
   ],
   imports: [
     CommonModule,

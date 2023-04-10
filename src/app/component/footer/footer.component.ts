@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import data from "../../../assets/data/jt-website.json"
+import data from "@assets/data/jt-website.json"
 import { Icons } from '@app/shared-components/shared-interface/Icons';
 @Component({
   selector: 'app-footer',

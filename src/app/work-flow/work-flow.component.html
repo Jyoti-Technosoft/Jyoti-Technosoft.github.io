@@ -1,0 +1,22 @@
+<div class="container mt-5">
+  <h1 class="work-flow-header title-color text-center">{{ data.header }}</h1>
+  <h6 class="work-flow-subheader text-center mb-5">{{ data.subHeader }}</h6>
+  <ng-container *ngFor="let item of data.processStep; index as i">
+    <div class="row" [ngClass]="{ 'd-flex flex-row-reverse': i % 2 == 0 }">
+      <div class="col-md-6 col-lg-6">
+        <div class="work-processing-details">
+          <div class="section-title style-four">
+            <h1 class="counting-number">{{ item.index }}</h1>
+            <h2 class="title">{{ item?.title }}</h2>
+            <p class="work-flow-desc">{{ item?.description }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6">
+        <div>
+          <img class="image-responsive" src="{{ item?.imageSrc }}" alt="img" />
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
