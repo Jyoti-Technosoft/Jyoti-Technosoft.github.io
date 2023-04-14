@@ -1,34 +1,32 @@
 <div class="container">
   <div class="row row-flex h-100 d-flex ">
     <div class="col-sm-12 col-md-7 col-lg-6 pb-5">
-      <div class="sbs-testimonial-slider">
+      <div class="testimonial-slider">
         <div class="choose_slider">
-          <div class="choose_slider_items">
+          <div class="slider-container">
             <ul id="sliderContainer" #sliderContainer>
               <ng-container *ngFor="let card of reviewItem; let i = index">
                 <li class="n-{{ i }}">
                   <div class="media">
                     <img
                       class="media-left"
-                      src="assets/img/client/6.png"
+                      src="assets/images/review/html02.png"
                       alt="client"
                     />
                     <div class="media-body">
-                      <h6>{{ card?.name }}</h6>
+                      <h6>{{ card?.clientName }}</h6>
                       <p class="designation">CTO of Uxa</p>
                       <span>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
                       </span>
                     </div>
                   </div>
-                  <p>
-                    Our support team will get assistance from AI-powered
-                    suggestions, making it quicker than ever to handle support
-                    requests.
+                  <p class="card-review">
+                    {{card?.review}}
                   </p>
                 </li>
               </ng-container>

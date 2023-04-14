@@ -15,16 +15,12 @@ import {
 })
 export class ClientReviewComponent implements OnInit {
   reviewItem: any[] = [
-    { name: 'Ronaldo1' },
-    { name: 'Ronaldo2' },
-    { name: 'Ronaldo3' },
-    { name: 'Ronaldo4' },
-    { name: 'Ronaldo5' },
-    { name: 'Ronaldo6' },
-    { name: 'Ronaldo7' },
-    { name: 'Ronaldo8' },
-    { name: 'Ronaldo9' },
-    { name: 'Ronaldo10' },
+    { clientName: 'Sean Miller' , review:'He has fair amount of knowledge in some of the Java frameworks. Used him for a quick fix. He is affordable and quick to respond. Decent resource if you are looking to hire someone affordable.' },
+    { clientName: 'Jason' , review:'I have been working with Dipesh since many months. His skills, hard-work, patience, perseverance, tolerance to accommodate change requests make him a start studded performer in my team. Waiting to hire him back again on my next project.' },
+    { clientName: 'Ron Warshawsky' , review:'Very professional and good developer' },
+    { clientName: 'Vipul' , review:"Extremely happy to work with him. He is tech person so job don't have take time to complete. Highly Recommended and will definitely work with him in future." },
+    { clientName: 'Justin' , review:'Very happy with Dipesh. Good work ethic and communicated well. He knows React well and I can recommend him to other companies' },
+    { clientName: 'OXOS Medical, Inc team' , review:"Dipesh was a wonderful asset to our development team. He is a GWT expert and I would not hesitate to work with him in the future on any UI/UX front end development." },
   ];
   @ViewChild('sliderContainer') template!: ElementRef;
 

@@ -1,14 +1,14 @@
 .row-flex {
-	min-height: 400px !important;
+	min-height: 500px !important;
 }
-.sbs-testimonial-slider {
-  height: 300px;
+.testimonial-slider {
+  height: 500px;
   margin-left: -90px;
   position: relative;
   .sbs-arrowleft {
     position: absolute;
     right: 0;
-    bottom: 53px;
+    bottom: 126px;
     height: 42px;
     width: 42px;
     border-radius: 50%;
@@ -34,7 +34,7 @@
   .sbs-arrowright {
     position: absolute;
     right: 0;
-    bottom: 4px;
+    bottom: 80px;
     height: 42px;
     width: 42px;
     border-radius: 50%;
@@ -58,7 +58,7 @@
     }
   }
 }
-.choose_slider_items {
+.slider-container {
   position: relative;
   ul {
     position: relative;
@@ -67,7 +67,7 @@
       background: #fff;
       box-shadow: 0 12px 36px #97a1b2 24;
       border-radius: 6px;
-      padding: 67px 30px 55px 40px;
+      padding: 50px 30px 55px 40px;
       img {
         height: 74px;
         width: 74px;
@@ -78,6 +78,9 @@
       .media {
         margin-bottom: 25px;
       }
+	  .card-review {
+		min-height: 100px;
+	  }
       .media-body {
         h6 {
           font-size: 21px;
@@ -125,7 +128,6 @@
     top: 0;
     transform: scale(0.9, 0.9);
     left: 150px;
-    padding: 67px 30px 55px 60px;
     z-index: 1;
     display: block;
     transition: all 0.5s ease;
@@ -255,14 +257,14 @@
 }
 
 @media (max-width: 991px) {
-  .choose_slider_items {
+  .slider-container {
     ul {
       li {
         left: 0% !important;
       }
     }
   }
-  .sbs-testimonial-slider {
+  .testimonial-slider {
 	margin-left: 0px;
 	display: flex;
     justify-content: space-evenly;
