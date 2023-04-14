@@ -1,55 +1,62 @@
 import {
-  AfterContentInit,
-  AfterViewInit,
   Component,
+  ElementRef,
   OnInit,
+  Renderer2,
+  ViewChild,
   ViewEncapsulation,
 } from '@angular/core';
-import { HostListener } from '@angular/core';
+
 @Component({
   selector: 'app-client-review',
   templateUrl: './client-review.component.html',
   styleUrls: ['./client-review.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
+export class ClientReviewComponent implements OnInit {
+  reviewItem: any[] = [
+    { name: 'Ronaldo1' },
+    { name: 'Ronaldo2' },
+    { name: 'Ronaldo3' },
+    { name: 'Ronaldo4' },
+    { name: 'Ronaldo5' },
+    { name: 'Ronaldo6' },
+    { name: 'Ronaldo7' },
+    { name: 'Ronaldo8' },
+    { name: 'Ronaldo9' },
+    { name: 'Ronaldo10' },
+  ];
+  @ViewChild('sliderContainer') template!: ElementRef;
 
-export class ClientReviewComponent implements OnInit, AfterContentInit  {
-  reviewItem: any[] = [1,2,3,4,5];
-  cardPerPage: number = 2;
-  currentIndex: number = 0;
-  reviewPage: number = 0;
-  counter = new Array();
+  constructor(private render: Renderer2) {}
 
-  constructor() {}
+  ngOnInit() {}
 
-  ngOnInit() {
-    this.getRowforReviewCard();
-  }
-
-  ngAfterContentInit () {
-    this.onResize();
-  }
-
-  getRowforReviewCard() {
-    this.counter = new Array(
-      Math.ceil(Number(this.reviewItem?.length / this.cardPerPage))
+  moveNext() {
+    Array.from(this.template.nativeElement.children).forEach(
+      (item: any, index: number) => {
+        let currentclass = Number(item.className?.split('-')?.pop());
+        let nextclass =
+          currentclass > 0
+            ? `n-${currentclass - 1}`
+            : `n-${this.template.nativeElement.children.length - 1}`;
+        this.render.removeClass(item, item.className);
+        this.render.addClass(item, nextclass);
+      }
     );
   }
 
-  onSlide(event: any) {
-    this.currentIndex = event.current;
-  }
-
-  @HostListener('window:resize') onResize() {
-    let width = window.innerWidth;
-    switch (true) {
-      case width < 980:
-        this.cardPerPage = 1;
-        break;
-      default:
-        this.cardPerPage = 2;
-        break;
-    }
-    this.getRowforReviewCard();
+  moveBack() {
+    Array.from(this.template.nativeElement.children).forEach(
+      (item: any, index: number) => {
+        let currentclass = Number(item.className?.split('-')?.pop());
+        let nextclass =
+          currentclass == this.template.nativeElement.children.length - 1
+            ? `n-0`
+            : `n-${currentclass + 1}`;
+        this.render.removeClass(item, item.className);
+        this.render.addClass(item, nextclass);
+      }
+    );
   }
 }

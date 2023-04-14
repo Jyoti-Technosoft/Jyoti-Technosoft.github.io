@@ -1,42 +1,64 @@
-<div class="container px-5">
-  <div class="row d-flex justify-content-center">
-    <div class="col-md-9">
-      <h2 class="d-flex justify-content-center">Clients Review</h2>
-      <p class="text-center">
-        We place huge value on strong relationships and have seen the benefit
-        they bring to our business. Customer feedback is vital in helping us to
-        get it right
-      </p>
+<div class="container">
+  <div class="row row-flex h-100 d-flex ">
+    <div class="col-sm-12 col-md-7 col-lg-6 pb-5">
+      <div class="sbs-testimonial-slider">
+        <div class="choose_slider">
+          <div class="choose_slider_items">
+            <ul id="sliderContainer" #sliderContainer>
+              <ng-container *ngFor="let card of reviewItem; let i = index">
+                <li class="n-{{ i }}">
+                  <div class="media">
+                    <img
+                      class="media-left"
+                      src="assets/img/client/6.png"
+                      alt="client"
+                    />
+                    <div class="media-body">
+                      <h6>{{ card?.name }}</h6>
+                      <p class="designation">CTO of Uxa</p>
+                      <span>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <p>
+                    Our support team will get assistance from AI-powered
+                    suggestions, making it quicker than ever to handle support
+                    requests.
+                  </p>
+                </li>
+              </ng-container>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="sbs-arrowleft">
+            <a class="curser-auto" (click)="moveBack()"
+              ><i class="bi bi-arrow-left-circle"></i
+            ></a>
+          </div>
+          <div class="sbs-arrowright">
+            <a class="curser-auto" (click)="moveNext()"
+              ><i class="bi bi-arrow-right-circle"></i
+            ></a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="row px-0 d-flex">
-      <div class="col px-0">
-        <ngb-carousel [showNavigationArrows]="false" 	[interval]="0" (slide)="onSlide($event)">
-          <ng-container
-            *ngFor="let review of counter; let indexOfelement = index"
-          >
-            <ng-template ngbSlide  [id]="indexOfelement.toString()">
-              <div class="d-flex justify-content-center">
-                <mat-card
-                  class="review-card my-5 col-lg-5 col-md-6 col-12 px-0"
-                  *ngFor="let item of reviewItem |  slice: (indexOfelement*cardPerPage) : (indexOfelement*cardPerPage) + cardPerPage"
-                >
-                  <mat-card-header>
-                    <mat-card-title>Rakesh Sharma {{ item }}</mat-card-title>
-                    <div mat-card-avatar class="example-header-image"></div>
-                  </mat-card-header>
-                  <mat-card-content>
-                    <p>
-                      The Shiba Inu is the smallest of the six original and
-                      distinct spitz breeds of dog from Japan. A small, agile
-                      dog that copes very well with mountainous terrain, the
-                      Shiba Inu was originally bred for hunting.
-                    </p>
-                  </mat-card-content>
-                </mat-card>
-              </div>
-            </ng-template>
-          </ng-container>
-        </ngb-carousel>
+    <div
+      class="col-xl-5 col-lg-6 pd-xl-5 order-lg-12 align-self-center d-flex justify-content-center"
+    >
+      <div class="section-title style-two mb-0 p-5">
+        <h2 class="title">What Our <span>Client Say?</span></h2>
+        <p>
+          Our support team will get assistance from Advance Tools <br />
+          suggestions, making it quicker than ever to handle support
+          <br />requests. assistance from AI-powered
+        </p>
       </div>
     </div>
   </div>
