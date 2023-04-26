@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import * as d3 from 'd3';
 
 interface contactInfo {
   label: string;
@@ -27,6 +28,19 @@ export class ContactUsComponent implements OnInit {
     { label: 'linkedin', icon: 'fa-linkedin-square', routerlink: 'services' },
   ];
 
+  selectedItem:string = 'adajanBranch';
+  @ViewChild('chart') chart!:ElementRef;
+  @ViewChild('mapSection') mapSection!:ElementRef;
+  @ViewChild('addressSection') addressSection!:ElementRef;
+  @ViewChild('addressSection2') addressSection2!:ElementRef;
+
+  public parentElement: any;
+  public parent: any;
+  public svg: any;
+
+
+
+
   ngOnInit(): void {
     this.initForm();
 
@@ -35,13 +49,13 @@ export class ContactUsComponent implements OnInit {
         label: 'contact no.',
         icon: 'call',
         descriptionDetails: '+91 98798 67255',
-        routerlink: 'tel:+91 8469499488',
+        routerlink: 'tel:+91 9879867255',
       },
       {
         label: 'mail',
         icon: 'mail',
         descriptionDetails: 'info@JyotiTechnosoft.com',
-        routerlink: 'mailto:hr.webosmotic@gmail.com',
+        routerlink: 'mailto:info@JyotiTechnosoft.com',
       },
       {
         label: 'Address',
@@ -51,6 +65,18 @@ export class ContactUsComponent implements OnInit {
         routerlink: '',
       },
     ];
+  }
+  ngAfterViewInit() { 
+    // this.parentElement = this.chart?.nativeElement;
+    // this.parent = d3.select(this.parentElement);
+    // this.svg = this.parent.append("svg")
+    // this.svg.append("line")          // attach a line
+    // .attr('position', 'absolute')
+    // .style("stroke", "black")  // colour the line
+    // .attr("x1", 50)     // x position of the first end of the line
+    // .attr("y1", 50)      // y position of the first end of the line
+    // .attr("x2", 100)     // x position of the second end of the line
+    // .attr("y2", 100);
   }
 
   initForm() {

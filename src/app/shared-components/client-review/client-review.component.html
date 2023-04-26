@@ -5,31 +5,29 @@
         <div class="choose_slider">
           <div class="slider-container">
             <ul id="sliderContainer" #sliderContainer>
-              <ng-container *ngFor="let card of reviewItem; let i = index">
-                <li class="n-{{ i }}">
-                  <div class="media">
-                    <img
-                      class="media-left"
-                      src="assets/images/review/html02.png"
-                      alt="client"
-                    />
-                    <div class="media-body">
-                      <h6>{{ card?.clientName }}</h6>
-                      <p class="designation">CTO of Uxa</p>
-                      <span>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                      </span>
-                    </div>
+              <li class="n-{{ i }}" *ngFor="let card of reviewItem; let i = index">
+                <div class="media">
+                  <img
+                    class="media-left"
+                    src="assets/images/review/html02.png"
+                    alt="client"
+                  />
+                  <div class="media-body">
+                    <h6>{{ card?.clientName }}</h6>
+                    <p class="designation">CTO of Uxa</p>
+                    <span>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </span>
                   </div>
-                  <p class="card-review">
-                    {{card?.review}}
-                  </p>
-                </li>
-              </ng-container>
+                </div>
+                <p class="card-review">
+                  {{card?.review}}
+                </p>
+              </li>
             </ul>
           </div>
         </div>

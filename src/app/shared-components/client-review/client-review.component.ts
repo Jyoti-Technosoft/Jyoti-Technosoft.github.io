@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import {
   Component,
   ElementRef,
@@ -24,33 +25,40 @@ export class ClientReviewComponent implements OnInit {
   ];
   @ViewChild('sliderContainer') template!: ElementRef;
 
-  constructor(private render: Renderer2) {}
+  constructor(
+    private render: Renderer2,
+    private scroller: ViewportScroller
+    ) {}
 
   ngOnInit() {}
 
   moveNext() {
     Array.from(this.template.nativeElement.children).forEach(
       (item: any, index: number) => {
-        let currentclass = Number(item.className?.split('-')?.pop());
+        let allclasses = item.className.split(' ');
+        allclasses = allclasses.filter((items)=>items != 'ng-star-inserted');
+        let currentclass = Number(allclasses[0]?.split('-')?.pop());
         let nextclass =
           currentclass > 0
             ? `n-${currentclass - 1}`
             : `n-${this.template.nativeElement.children.length - 1}`;
-        this.render.removeClass(item, item.className);
+        this.render.removeClass(item, allclasses[0]);
         this.render.addClass(item, nextclass);
-      }
+       }
     );
   }
 
   moveBack() {
     Array.from(this.template.nativeElement.children).forEach(
       (item: any, index: number) => {
-        let currentclass = Number(item.className?.split('-')?.pop());
+        let allclasses = item.className.split(' ');
+        allclasses = allclasses.filter((items)=>items != 'ng-star-inserted');
+        let currentclass = Number(allclasses[0]?.split('-')?.pop());
         let nextclass =
           currentclass == this.template.nativeElement.children.length - 1
             ? `n-0`
             : `n-${currentclass + 1}`;
-        this.render.removeClass(item, item.className);
+        this.render.removeClass(item, allclasses[0]);
         this.render.addClass(item, nextclass);
       }
     );

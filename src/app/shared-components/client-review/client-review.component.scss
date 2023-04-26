@@ -8,7 +8,7 @@
   .sbs-arrowleft {
     position: absolute;
     right: 0;
-    bottom: 126px;
+    bottom: 133px;
     height: 42px;
     width: 42px;
     border-radius: 50%;
@@ -256,7 +256,8 @@
   cursor: pointer;
 }
 
-@media (max-width: 991px) {
+
+@media (max-width: 1188px) {
   .slider-container {
     ul {
       li {
@@ -271,5 +272,13 @@
   }
   .row-flex {
 	flex-direction: column-reverse;
+  }
+  .sbs-arrowright {
+	bottom: 4px !important;
+	right: -21px !important;
+  }
+  .sbs-arrowleft {
+	right: 21px !important;
+	bottom : 4px !important;
   }
 }
