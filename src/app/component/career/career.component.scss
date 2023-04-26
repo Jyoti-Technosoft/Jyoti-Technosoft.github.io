@@ -112,3 +112,25 @@ $header-text-color: #3a7dc8;
   white-space: unset !important ;
   overflow: unset !important;
 }
+
+.mat-mdc-card {
+  border-radius: 0%;
+  border-right: 1px solid;
+  box-shadow: none;
+  border-bottom: 1px solid black;
+
+}
+
+.form-search-block {
+  flex: auto;
+}
+
+.selected-career, .careers-content-block .careers-items-list {
+  border-right: none;
+  background-color: whitesmoke;
+}
+
+
+.filter-job-results:hover {
+  // background-color: antiquewhite;
+}

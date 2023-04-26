@@ -331,3 +331,20 @@ $color_2: #367dc8;
     z-index: 0;
   }
 }
+
+
+.top-btn {
+  position: fixed;
+  bottom: 2vh;
+  z-index: 999;
+  float: right;
+  right: 2vh;
+  height: 4.2rem;
+  width: 4.2rem;
+  background-color: #a3c742;
+  border:none;
+  .bi-arrow-up-short {
+    font-size: 40px;
+    color: #ffffff;
+  }
+}

@@ -1,5 +1,6 @@
 $color_1 : #ffffff;
 $color_2 : #d9dee1;
+$bg_img_height : 210px;
 
 .contact-form-block {
   background-color: $color_1;
@@ -25,7 +26,10 @@ $color_2 : #d9dee1;
 
 .contact-form-wrapper {
   background-color: $color_1;
-  border-radius: 20px;
+  border-radius: 20px; 
+  .row.px-4.mb-5 {
+    margin-top: calc(210px - 277px);
+  }
 }
 
 .contact-map-wrapper {
@@ -94,6 +98,9 @@ $color_2 : #d9dee1;
 @media (max-width: 767px) {
   .contact-form-wrapper {
     width: 90%;
+    .row.px-4.mb-5 {
+      margin-top: 0;
+    }
     .contact-form-inner-wrapper {
       padding: 0 !important;
       margin-top: 26px;

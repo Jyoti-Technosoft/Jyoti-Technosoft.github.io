@@ -1,0 +1,57 @@
+.section-title {
+  .counting-number {
+    font-size: 92px;
+    font-weight: 500;
+    letter-spacing: 1.84px;
+    color: #5b6880;
+    background: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    position: relative;
+    display: inline-block;
+  }
+
+  .title {
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: 0.92px;
+    color: #01358d;
+    opacity: 1;
+    font-weight: 700;
+    margin-bottom: 0;
+    font-family: var(--poppins-font);
+  }
+  .work-flow-desc {
+    letter-spacing: 0.32px;
+    color: #5b6880;
+    opacity: 1;
+    font-size: var(--body-font-size);
+    line-height: var(--line-height30);
+    margin-top: 18px;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+}
+
+.image-responsive {
+    max-width: 100%;
+    // max-width: inherit;
+    max-height: -webkit-fill-available;
+}
+
+
+.work-processing-details {
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+
+
+.work-flow-header {
+    color: #3a7dc8;
+}
+
+.work-flow-subheader {
+    color: #5b6880;
+}
