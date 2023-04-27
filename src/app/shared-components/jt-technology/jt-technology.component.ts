@@ -11,6 +11,7 @@ export class JtTechnologyComponent implements OnInit {
   data:any = {...data};
   technology!: Technology[];
   selectedTechnology!: Technology;
+  mouseselectoptoin: any;
 
   ngOnInit() {
     this.technology = this.data?.technologyStack;
@@ -19,5 +20,13 @@ export class JtTechnologyComponent implements OnInit {
 
   onChange(selectedTechnology) {
     this.selectedTechnology = selectedTechnology;
+  }
+
+  mouseselect(item) {
+    if (this.mouseselectoptoin == item) {
+      this.mouseselectoptoin  = '';
+    } else {
+      this.mouseselectoptoin  = item;
+    }
   }
 }

@@ -17,11 +17,50 @@ $white-color: #ffffff;
 }
 
 .img-responsive {
-    width: 10vh !important;
-    height: 10vh !important;
+  width: 10vh !important;
+  height: 10vh !important;
 }
 
-
 .tech-name {
-    color: $primary-color;
+  color: $primary-color;
+}
+
+.stack-position {
+  div {
+    &:nth-child(1) {
+      svg > path {
+        
+        fill: #d13288;
+        opacity: 2;
+      }
+    }
+    &:nth-child(2) {
+      svg > path {
+        transition: 0.5s ease-out;
+        fill: #2a99bd;
+        fill-opacity: 0.8;
+      }
+    }
+    &:nth-child(3) {
+      svg > path {
+        transition: 0.5s ease-out;
+        fill: #2961d2;
+        fill-opacity: 0.8;
+      }
+    }
+    &:nth-child(4) {
+      svg > path {
+        fill: red;
+        transition: 0.5s ease-out;
+        fill-opacity: 0.8;
+      }
+    }
+  }
+}
+
+.remove-hover {
+  svg > path {
+    transition: 0.5s ease-in;
+    fill : #909295 !important;
+  }
 }
