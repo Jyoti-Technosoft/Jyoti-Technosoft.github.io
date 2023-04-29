@@ -5,7 +5,7 @@
   height: 500px;
   margin-left: -90px;
   position: relative;
-  .sbs-arrowleft {
+  .arrowleft {
     position: absolute;
     right: 0;
     bottom: 133px;
@@ -31,7 +31,7 @@
       }
     }
   }
-  .sbs-arrowright {
+  .arrowright {
     position: absolute;
     right: 0;
     bottom: 80px;
@@ -262,22 +262,22 @@
     ul {
       li {
         left: 0% !important;
+        width: 100%;
       }
     }
   }
   .testimonial-slider {
 	margin-left: 0px;
-	display: flex;
     justify-content: space-evenly;
   }
   .row-flex {
 	flex-direction: column-reverse;
   }
-  .sbs-arrowright {
+  .arrowright {
 	bottom: 4px !important;
 	right: -21px !important;
   }
-  .sbs-arrowleft {
+  .arrowleft {
 	right: 21px !important;
 	bottom : 4px !important;
   }

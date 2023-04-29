@@ -16,18 +16,29 @@ const routes: Routes = [
           import('@app/component/home/home.module').then((m) => m.HomeModule),
       },
       {
-        path:'career',
-        loadChildren: () => 
-          import('@app/component/career/career.module').then((m) => m.CareerModule),
+        path: 'career',
+        loadChildren: () =>
+          import('@app/component/career/career.module').then(
+            (m) => m.CareerModule
+          ),
       },
       {
-        path:'hire-us',
-        loadChildren: () => 
-          import('@app/component/hire-developer/hire-developer.module').then((m) => m.HireDeveloperModule),
+        path: 'hire-us',
+        loadChildren: () =>
+          import('@app/component/hire-developer/hire-developer.module').then(
+            (m) => m.HireDeveloperModule
+          ),
+      },
+      {
+        path: 'portfolio',
+        loadChildren: () =>
+          import('@app/component/portfolio/portfolio.module').then(
+            (m) => m.PortfolioComponentModule
+          ),
       },
       { path: 'contact-us', component: ContactUsComponent },
       { path: 'services', component: ServicesComponent },
-    ]
+    ],
   },
 ];
 
