@@ -1,3 +1,14 @@
+.full-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    .container-router {
+      margin-top: 60px;
+      margin-left: 78px;
+    }
+}
 .bg-color {
     background-color: #f5f8fb !important;
 }

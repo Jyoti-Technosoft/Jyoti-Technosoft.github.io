@@ -297,9 +297,36 @@
     }
   ],
   "portfolio": [
-    { "title": "All" },
-    { "title": "Java" },
-    { "title": "Wordpress" },
-    { "title": "angular" }
+    {
+      "technology":"All"
+    },
+    {
+      "projectName":"Progress Maker",
+      "technology":"angular",
+      "description":"The comprehensive platform for Tool Optimization and progress management",
+      "logo":"assets/images/portfolio/ProgressMaker_Logo.png",
+      "backgroundImage":"assets/images/portfolio/progressmaker_background.png"
+    },
+    {
+      "projectName":"GWT",
+      "technology":"java",
+      "description":"The comprehensive platform for Tool Optimization and progress management",
+      "logo":"assets/images/portfolio/ProgressMaker_Logo.png",
+      "backgroundImage":"assets/images/portfolio/progressmaker_background.png"
+    },
+    {
+      "projectName":"GWT",
+      "technology":"java",
+      "description":"The comprehensive platform for Tool Optimization and progress management",
+      "logo":"assets/images/portfolio/ProgressMaker_Logo.png",
+      "backgroundImage":"assets/images/portfolio/progressmaker_background.png"
+    },
+    {
+      "projectName":"GWT",
+      "technology":"java",
+      "description":"The comprehensive platform for Tool Optimization and progress management",
+      "logo":"assets/images/portfolio/ProgressMaker_Logo.png",
+      "backgroundImage":"assets/images/portfolio/progressmaker_background.png"
+    }
   ]
 }

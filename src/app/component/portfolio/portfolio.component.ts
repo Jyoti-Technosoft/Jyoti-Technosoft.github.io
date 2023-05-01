@@ -8,13 +8,17 @@ import * as portfoliodata from  '@assets/data/jt-website.json';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent implements OnInit {
-  portfoliodata = {...portfoliodata}
-  sliderdata: any;
-  selectedTechnology:string = this.portfoliodata.portfolio[0].title 
-
+  portfoliodata = {...portfoliodata};
+  sliderdataTitle: any;
+  projectData:any;
+  filters:any ={ 
+    technology:  this.portfoliodata.portfolio[0].technology
+  } ;
 
   ngOnInit(): void {
-     this.sliderdata = this.portfoliodata.portfolio;
+    this.sliderdataTitle = this.portfoliodata.portfolio;
+    this.projectData = this.portfoliodata.portfolio;
+    this.projectData = this.projectData?.filter((data)=> data.technology !== "All");
   }
 
 }

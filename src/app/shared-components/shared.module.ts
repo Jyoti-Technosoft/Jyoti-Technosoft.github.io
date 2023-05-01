@@ -13,6 +13,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { JtTechnologyComponent } from './jt-technology/jt-technology.component';
 import { ClientReviewComponent } from './client-review/client-review.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { FilterPipe } from './pipes/filter/filter.pipe';
+import { DistinctvaluePipe } from './pipes/distinct-value/distinctvalue.pipe';
 
 
 const materialModule = [
@@ -27,11 +29,13 @@ const materialModule = [
 ];
 
 @NgModule({
-  declarations: [JtTechnologyComponent, ClientReviewComponent],
+  declarations: [JtTechnologyComponent, ClientReviewComponent, FilterPipe, DistinctvaluePipe],
   imports: [CommonModule, materialModule, ReactiveFormsModule, FormsModule],
   exports: [
     materialModule,
     ReactiveFormsModule,
+    FilterPipe,
+    DistinctvaluePipe,
     RecaptchaModule,
     RecaptchaFormsModule,
     FormsModule,
