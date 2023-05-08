@@ -10,11 +10,14 @@ import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
 import { JtTechnologyComponent } from './jt-technology/jt-technology.component';
 import { ClientReviewComponent } from './client-review/client-review.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { FilterPipe } from './pipes/filter/filter.pipe';
 import { DistinctvaluePipe } from './pipes/distinct-value/distinctvalue.pipe';
+import { MultipleCarouselComponent } from './multiple-carousel/multiple-carousel.component';
 
 
 const materialModule = [
@@ -29,10 +32,12 @@ const materialModule = [
 ];
 
 @NgModule({
-  declarations: [JtTechnologyComponent, ClientReviewComponent, FilterPipe, DistinctvaluePipe],
-  imports: [CommonModule, materialModule, ReactiveFormsModule, FormsModule],
+  declarations: [JtTechnologyComponent, ClientReviewComponent, FilterPipe, DistinctvaluePipe,MultipleCarouselComponent],
+  imports: [CommonModule, materialModule, ReactiveFormsModule, FormsModule,CarouselModule],
   exports: [
     materialModule,
+    CarouselModule,
+    MultipleCarouselComponent,
     ReactiveFormsModule,
     FilterPipe,
     DistinctvaluePipe,

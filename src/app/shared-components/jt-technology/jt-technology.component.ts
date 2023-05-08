@@ -30,13 +30,6 @@ export class JtTechnologyComponent implements OnInit {
     this.selectedTechnology = selectedTechnology;
   }
 
-  mouseselect(item) {
-    if (this.mouseselectoptoin == item) {
-      this.mouseselectoptoin = null;
-    } else {
-      this.mouseselectoptoin = item;
-    }
-  }
 
   isElementInViewport(el) {
     var rect = el.getBoundingClientRect();
@@ -56,9 +49,13 @@ export class JtTechnologyComponent implements OnInit {
         if (!items[i].classList.contains('in-view')) {
           items[i].classList.add('in-view');
         }
-      } else if (items[i].classList.contains('in-view')) {
-        items[i].classList.remove('in-view');
       }
     }
+  } 
+  //  ******
+  // Note : This is used for removeing all card
+  // ******* 
+  // else if (items[i].classList.contains('in-view')) {
+  //   items[i].classList.remove('in-view');
+  // }
   }
-}
