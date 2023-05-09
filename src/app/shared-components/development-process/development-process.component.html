@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 justify-content-center d-flex align-items-center">
+      <div class="section-title style-two mb-0 p-5">
+        <h2 class="title">Our Development Process</h2>
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-12 mt-5">
+      <section class="timeline">
+        <ul>
+          <ng-container *ngFor="let item of processDevelopment">
+            <li>
+              <div class="flip">
+                <div
+                  class="front"
+                  style="background-image: url({{item.imageSrc}}); box-shadow: none;"
+                ></div>
+                <div class="back">
+                  <h3 style="color: #367dc8">{{ item.title }}</h3>
+                  <p>
+                    Good tools make application development quicker and easier
+                    to maintain than if you did everything by hand..
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ng-container>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>

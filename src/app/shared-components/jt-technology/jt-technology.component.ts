@@ -12,50 +12,14 @@ export class JtTechnologyComponent implements OnInit {
   technology!: Technology[];
   selectedTechnology!: Technology;
   mouseselectoptoin: any;
-  processDevelopment: any;
-
-  @HostListener('window:scroll', ['$event']) onWindowScroll(e) {
-    this.callbackFunc();
-  }
 
   ngOnInit() {
-    this.callbackFunc();
-
     this.technology = this.data?.technologyStack;
     this.selectedTechnology = this.technology[0];
-    this.processDevelopment = this.data.developmentProcess;
   }
 
   onChange(selectedTechnology) {
     this.selectedTechnology = selectedTechnology;
   }
 
-
-  isElementInViewport(el) {
-    var rect = el.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
-
-  callbackFunc() {
-    var items = document.querySelectorAll('.timeline li');
-    for (var i = 0; i < items.length; i++) {
-      if (this.isElementInViewport(items[i])) {
-        if (!items[i].classList.contains('in-view')) {
-          items[i].classList.add('in-view');
-        }
-      }
-    }
-  } 
-  //  ******
-  // Note : This is used for removeing all card
-  // ******* 
-  // else if (items[i].classList.contains('in-view')) {
-  //   items[i].classList.remove('in-view');
-  // }
   }

@@ -328,5 +328,12 @@
       "logo":"assets/images/portfolio/ProgressMaker_Logo.png",
       "backgroundImage":"assets/images/portfolio/progressmaker_background.png"
     }
+  ],
+  "clientlogos": [
+    { "imagePath": "assets/images/portfolio/ProgressMaker_Logo.svg" },
+    { "imagePath": "assets/images/portfolio/tlc_engine-removebg-preview.png" },
+    { "imagePath": "assets/images/portfolio/eneros-removebg-preview.png" },
+    { "imagePath" : "assets/images/portfolio/CX-Group-Logo-Color.png" },
+    { "imagePath" : "assets/images/portfolio/boatsground.png" }
   ]
 }

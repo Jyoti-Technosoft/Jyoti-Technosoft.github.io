@@ -18,6 +18,7 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { FilterPipe } from './pipes/filter/filter.pipe';
 import { DistinctvaluePipe } from './pipes/distinct-value/distinctvalue.pipe';
 import { MultipleCarouselComponent } from './multiple-carousel/multiple-carousel.component';
+import { DevelopmentProcessComponent } from './development-process/development-process.component';
 
 
 const materialModule = [
@@ -32,12 +33,13 @@ const materialModule = [
 ];
 
 @NgModule({
-  declarations: [JtTechnologyComponent, ClientReviewComponent, FilterPipe, DistinctvaluePipe,MultipleCarouselComponent],
+  declarations: [JtTechnologyComponent, ClientReviewComponent, FilterPipe, DistinctvaluePipe,MultipleCarouselComponent, DevelopmentProcessComponent],
   imports: [CommonModule, materialModule, ReactiveFormsModule, FormsModule,CarouselModule],
   exports: [
     materialModule,
     CarouselModule,
     MultipleCarouselComponent,
+    DevelopmentProcessComponent,
     ReactiveFormsModule,
     FilterPipe,
     DistinctvaluePipe,

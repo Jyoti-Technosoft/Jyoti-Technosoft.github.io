@@ -9,6 +9,7 @@ import * as portfoliodata from  '@assets/data/jt-website.json';
 })
 export class PortfolioComponent implements OnInit {
   portfoliodata = {...portfoliodata};
+  clientLogo = this.portfoliodata.clientlogos;
   sliderdataTitle: any;
   projectData:any;
   filters:any ={ 

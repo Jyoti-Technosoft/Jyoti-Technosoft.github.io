@@ -1,11 +1,9 @@
 import {
-  AfterContentInit,
   Component,
-  ElementRef,
-  HostListener,
+  Input,
   OnInit,
-  ViewEncapsulation,
 } from '@angular/core';
+
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
@@ -14,30 +12,35 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./multiple-carousel.component.scss'],
 })
 export class MultipleCarouselComponent implements OnInit {
-  carousel = document.querySelector('.carousel');
-  firstImg = this.carousel?.querySelectorAll('img')[0];
-  arrowIcons = document.querySelectorAll('.wrapper i');
-  isDragStart = false;
-  isDragging = false;
-  prevPageX: any;
-  prevScrollLeft: any;
-  positionDiff: any;
 
-  constructor(private elementRef: ElementRef) {}
+  @Input('src') src: any[] | undefined;
+  customOptions: OwlOptions = {
+    loop: true,
+    margin: 10,
+    autoplay:true,
+    lazyLoad: true,
+    dots: false,
+    freeDrag:true,
+    responsive: {
+      0: {
+       items: 1
+     },
+      480: {
+       items: 2 
+     },
+     600: {
+       items : 3
+     },
+     800 : {
+      items : 4
+     },
+      940: {
+       items: 5
+     }
+    }
+  }
+
+  constructor() {}
   ngOnInit(): void {
-    let items = document.querySelectorAll('.carousel .carousel-item');
-
-    items.forEach((el) => {
-      const minPerSlide = 4;
-      let next = el.nextElementSibling;
-      for (var i = 1; i < minPerSlide; i++) {
-        if (!next) {
-          // wrap carousel by using first child
-          next = items[0];
-        }
-        let cloneChild = next.cloneNode(true);
-        next = next.nextElementSibling;
-      }
-    });
   }
 }
