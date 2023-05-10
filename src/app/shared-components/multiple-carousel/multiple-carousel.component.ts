@@ -16,7 +16,7 @@ export class MultipleCarouselComponent implements OnInit {
   @Input('src') src: any[] | undefined;
   customOptions: OwlOptions = {
     loop: true,
-    margin: 10,
+    margin: 30,
     autoplay:true,
     lazyLoad: true,
     dots: false,
@@ -37,7 +37,7 @@ export class MultipleCarouselComponent implements OnInit {
       940: {
        items: 5
      }
-    }
+    },
   }
 
   constructor() {}

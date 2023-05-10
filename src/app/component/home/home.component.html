@@ -85,5 +85,7 @@
 <!-- End of Our Development Process -->
 
 <!-- Client review -->
-<app-client-review></app-client-review>
+<ng-container *ngIf="showClientReview">
+  <app-client-review></app-client-review>
+</ng-container>
 <!-- Client review -->

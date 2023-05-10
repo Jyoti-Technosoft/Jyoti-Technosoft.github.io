@@ -1,5 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 
+import { environment } from 'enviroments/enviroment';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -15,7 +17,7 @@ export class HomeComponent implements OnDestroy, OnInit {
         "Hireing ",
     },
   ];
-
+  showClientReview : boolean | undefined ;
   hireUsContent: hireUsContent[] = [
     {
       cardHeader: 'Web development',
@@ -43,7 +45,9 @@ export class HomeComponent implements OnDestroy, OnInit {
     },
   ];
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.showClientReview = environment.showClientReview;
+  }
 
   ngOnDestroy(): void {}
 }

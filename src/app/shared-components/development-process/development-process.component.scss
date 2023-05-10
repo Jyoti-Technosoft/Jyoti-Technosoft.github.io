@@ -26,13 +26,14 @@ $text-color: #3c3f64;
         z-index: 2;
         background: #eee;
       }
+
       div {
         position: relative;
         bottom: 0;
         width: 400px;
         padding: 20px;
-        background: $primary-color;
-        box-shadow: 0px 10px 14px #a4c4e6;
+        // background: $primary-color;
+        // box-shadow: 0px 10px 14px #a4c4e6;
         border-radius: 5px;
         display: flex;
         align-items: center;
@@ -46,14 +47,27 @@ $text-color: #3c3f64;
           }
         }
       }
+      .description {
+        background: none !important;
+        box-shadow: none !important;
+      }
+
       &:nth-of-type(odd) {
         > div {
           left: 45px;
+        }
+        > .description {
+          left: -439px;
+          top: -238px;
         }
       }
       &:nth-of-type(even) {
         > div {
           left: -439px;
+        }
+        > .description {
+          left: 45px;
+          top: -238px;
         }
       }
     }
@@ -67,6 +81,11 @@ $text-color: #3c3f64;
   ul {
     li {
       .flip {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.8s ease-in-out;
+      }
+      .description {
         visibility: hidden;
         opacity: 0;
         transition: all 0.8s ease-in-out;
@@ -105,10 +124,18 @@ $text-color: #3c3f64;
           > div {
             left: -289px;
           }
+          > .description {
+            left: 45px;
+            top: 0px;
+          }
         }
         &:nth-of-type(odd) {
           div {
             transform: none;
+          }
+          > .description {
+            left: 45px;
+            top: 0px;
           }
         }
         &:nth-of-type(even) {
@@ -118,12 +145,6 @@ $text-color: #3c3f64;
         }
       }
     }
-  }
-}
-
-@media screen and (max-width: 600px) {
-  body {
-    background: #8bfff4;
   }
   .timeline {
     ul {
@@ -148,33 +169,6 @@ $text-color: #3c3f64;
           }
         }
       }
-    }
-  }
-}
-
-// custom
-.flip {
-  position: relative;
-  display: inline-block;
-  margin-right: 2px;
-  margin-bottom: 1em;
-  width: 400px;
-  box-shadow: none !important;
-  > .front,
-  > .back {
-    display: block;
-    color: white;
-    width: inherit;
-    background-size: cover !important;
-    background-position: center !important;
-    height: 220px;
-    padding: 1em 2em;
-    background: #313131;
-    border-radius: 10px;
-    p {
-      font-size: 0.9125rem;
-      line-height: 160%;
-      color: #999;
     }
   }
 }

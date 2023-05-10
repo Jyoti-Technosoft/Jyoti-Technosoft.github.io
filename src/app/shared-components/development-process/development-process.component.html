@@ -11,17 +11,14 @@
           <ng-container *ngFor="let item of processDevelopment">
             <li>
               <div class="flip">
-                <div
-                  class="front"
-                  style="background-image: url({{item.imageSrc}}); box-shadow: none;"
-                ></div>
-                <div class="back">
-                  <h3 style="color: #367dc8">{{ item.title }}</h3>
-                  <p>
-                    Good tools make application development quicker and easier
-                    to maintain than if you did everything by hand..
-                  </p>
-                </div>
+                <img src="{{ item.imageSrc }}" class="img-fluid" alt="" />
+              </div>
+              <div class="description d-flex flex-column">
+                <h3 style="color: #367dc8">{{ item.title }}</h3>
+                <p>
+                  Good tools make application development quicker and easier
+                  to maintain than if you did everything by hand..
+                </p>
               </div>
             </li>
           </ng-container>
