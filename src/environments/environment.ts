@@ -5,9 +5,8 @@
 // ***
 
 let configWebsite = {
-    showClientReview: false,
-  };
-  
-  // Exporting envirment
-  export const environment = configWebsite;
-  
+  showClientReview: false,
+};
+
+// Exporting envirment
+export const environment = configWebsite;
