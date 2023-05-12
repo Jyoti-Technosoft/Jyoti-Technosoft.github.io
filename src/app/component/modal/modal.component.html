@@ -1,0 +1,104 @@
+<form class="example-form" [formGroup]="contactUsForm">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-6 mb-1">
+          <mat-form-field class="example-full-width col-12">
+            <mat-label>First Name</mat-label>
+            <input
+              class="col-12"
+              type="text"
+              matInput
+              formControlName="firstName"
+              placeholder="First Name"
+            />
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 mb-1">
+          <mat-form-field class="example-full-width col-12">
+            <mat-label>Last Name</mat-label>
+            <input
+              class="col-12"
+              type="text"
+              matInput
+              formControlName="lastName"
+              placeholder="Last Name"
+            />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-6 mb-1">
+          <mat-form-field class="example-full-width col-12">
+            <mat-label>Email Address</mat-label>
+            <input
+              class="col-12"
+              type="text"
+              matInput
+              formControlName="emailAddress"
+              placeholder="John@yahoomail.com"
+            />
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 mb-1">
+          <mat-form-field class="example-full-width col-12">
+            <mat-label>Mobile No. </mat-label>
+            <input
+              class="col-12"
+              type="text"
+              matInput
+              formControlName="mobileNo"
+              placeholder="Mobile Number"
+            />
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 mb-1">
+          <mat-form-field class="example-full-width col-12">
+            <mat-label>Current Salary </mat-label>
+            <input
+              class="col-12"
+              type="number"
+              matInput
+              formControlName="currentSalary"
+              placeholder="Current Salary"
+            />
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 mb-1">
+          <mat-form-field class="example-full-width col-12">
+            <mat-label>Notice Period </mat-label>
+            <input
+              class="col-12"
+              type="text"
+              matInput
+              formControlName="noticePeriod"
+              placeholder="Notice Period"
+            />
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-6 mb-1">
+            <re-captcha
+              formControlName="recaptcha"
+              (resolved)="resolved($event)"
+              siteKey="6LfmNKMZAAAAAKrDxRn2_NcHoRPW9-uFuWs98XCx"
+            ></re-captcha>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 mb-1">
+            <input
+              type="file"
+              class="file-upload"
+              onchange="console.log(event.target.files)"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 my-3 d-flex justify-content-start">
+            <button
+              class="contact-submit-btn pe-auto"
+              [disabled]="!this.contactUsForm.valid"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>

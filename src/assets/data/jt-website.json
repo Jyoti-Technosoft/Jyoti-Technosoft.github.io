@@ -110,16 +110,6 @@
           "eCommerce App Development"
         ]
       },
-      "on-DemandSolution": {
-        "label": "On-Demand Solution",
-        "data": [
-          "Grocery Delivery App",
-          "Taxi Booking App",
-          "eLearning App",
-          "Restaurant Booking App",
-          "Food Delivery App"
-        ]
-      },
       "company": {
         "label": "Company",
         "data": [
@@ -343,5 +333,112 @@
     { "clientName": "Vipul" , "review":"Extremely happy to work with him. He is tech person so job don't have take time to complete. Highly Recommended and will definitely work with him in future." },
     { "clientName": "Justin" , "review":"Very happy with Dipesh. Good work ethic and communicated well. He knows React well and I can recommend him to other companies" },
     { "clientName": "OXOS Medical, Inc team" , "review":"Dipesh was a wonderful asset to our development team. He is a GWT expert and I would not hesitate to work with him in the future on any UI/UX front end development." }
+  ],
+  "jobs": [
+    {
+      "id":1,
+      "imagePath": "../../../assets/images/angularIcon.png",
+      "jobName": "Angular Developer",
+      "jobPost": "Lead Engineer - Front End",
+      "jobDescription": "We are looking to hire a dynamic Angular Developer to join our global team. As an Angular developer, you will be required to build a top-quality coding base. You will also be required to create amazing user interfaces for desktop and mobile apps.",
+      "jobNature": "Full Time",
+      "address": "417, Sumerru Business Corner, Nr. Somchintamani Appt., B/H Rajhans Multiplex, Pal Gam, Surat 395009, Gujarat, India",
+      "salary": "15k-25k",
+      "technology": "Angular",
+      "jobCatagory": "Technology",
+      "briefJobDescription": "<ul><li>Determine the functional, non-functional requirements and scope working with the business analysts and engineering managers</li><li>Design and develop multi-tier, cloud-native, high performance, and scalable solutions</li><li>Apply software engineering principles, design patterns and best practices to build solutions that are testable, secure, and robust</li><li>Lead cross functional agile teams across the software development lifecycle</li><li>Lead cross functional agile teams across the software development lifecycle</li></ul>",
+      "jobRequirement": "Years of Experience: 5+ years <br> Relevant hands-on experience with one of more of the following: <br> <ul> <li>Web technologies - JavaScript, HTML5, CSS3</li><li>Web frameworks – Angular / React JS</li><li>Mobile frameworks – React Native</li><li>Web server technologies - Node.js / Nginx</li></ul>"
+    },
+    {
+      "id":2,
+      "imagePath": "../../../assets/images/angularIcon.png",
+      "jobName": "Angular Developer",
+      "jobDescription": "We are looking to hire a dynamic Angular Developer to join our global team. As an Angular developer, you will be required to build a top-quality coding base. You will also be required to create amazing user interfaces for desktop and mobile apps.",
+      "jobNature": "Part Time",
+      "address": "417, Sumerru Business Corner, Nr. Somchintamani Appt., B/H Rajhans Multiplex, Pal Gam, Surat 395009, Gujarat, India",
+      "salary": "15k-25k",
+      "technology": "Angular",
+      "jobCatagory": "Technology",
+      "briefJobDescription": "<ul><li>Determine the functional, non-functional requirements and scope working with the business analysts and engineering managers</li><li>Design and develop multi-tier, cloud-native, high performance, and scalable solutions</li><li>Apply software engineering principles, design patterns and best practices to build solutions that are testable, secure, and robust</li><li>Lead cross functional agile teams across the software development lifecycle</li><li>Lead cross functional agile teams across the software development lifecycle</li></ul>",
+      "jobRequirement": "Years of Experience: 5+ years <br> Relevant hands-on experience with one of more of the following: <br> <ul> <li>Web technologies - JavaScript, HTML5, CSS3</li><li>Web frameworks – Angular / React JS</li><li>Mobile frameworks – React Native</li><li>Web server technologies - Node.js / Nginx</li></ul>"
+    },
+    {
+      "id":3,
+      "imagePath": "../../../assets/images/javascript.png",
+      "jobName": "JavaScript Developer",
+      "jobDescription": "We are looking for a JavaScript Developer who is motivated to combine the art of design with the art of programming Responsibilities will include implementing visual elements and their behaviors with user interactions.",
+      "jobNature": "Full Time",
+      "address": "417, Sumerru Business Corner, Nr. Somchintamani Appt., B/H Rajhans Multiplex, Pal Gam, Surat 395009, Gujarat, India",
+      "salary": "15k-25k",
+      "technology": "Javascript",
+      "jobCatagory": "Business Development Engineer" ,
+      "briefJobDescription": "<ul><li>Determine the functional, non-functional requirements and scope working with the business analysts and engineering managers</li><li>Design and develop multi-tier, cloud-native, high performance, and scalable solutions</li><li>Apply software engineering principles, design patterns and best practices to build solutions that are testable, secure, and robust</li><li>Lead cross functional agile teams across the software development lifecycle</li><li>Lead cross functional agile teams across the software development lifecycle</li></ul>",
+      "jobRequirement": "Years of Experience: 5+ years <br> Relevant hands-on experience with one of more of the following: <br> <ul> <li>Web technologies - JavaScript, HTML5, CSS3</li><li>Web frameworks – Angular / React JS</li><li>Mobile frameworks – React Native</li><li>Web server technologies - Node.js / Nginx</li></ul>"
+    },
+    {
+      "id":4,
+      "imagePath": "../../../assets/images/java.png",
+      "jobName": "Java Developer",
+      "jobDescription": "We are looking to hire a dynamic Java Developer to join our global team. As an Java developer, you will be required to build a top-quality coding base. You will also be required to create amazing user interfaces for desktop and mobile apps.",
+      "jobNature": "Full Time",
+      "address": "417, Sumerru Business Corner, Nr. Somchintamani Appt., B/H Rajhans Multiplex, Pal Gam, Surat 395009, Gujarat, India",
+      "salary": "15k-25k",
+      "technology": "Java",
+      "jobCatagory": "Human Resource",
+      "briefJobDescription": "<ul><li>Determine the functional, non-functional requirements and scope working with the business analysts and engineering managers</li><li>Design and develop multi-tier, cloud-native, high performance, and scalable solutions</li><li>Apply software engineering principles, design patterns and best practices to build solutions that are testable, secure, and robust</li><li>Lead cross functional agile teams across the software development lifecycle</li><li>Lead cross functional agile teams across the software development lifecycle</li></ul>",
+      "jobRequirement": "Years of Experience: 5+ years <br> Relevant hands-on experience with one of more of the following: <br> <ul> <li>Web technologies - JavaScript, HTML5, CSS3</li><li>Web frameworks – Angular / React JS</li><li>Mobile frameworks – React Native</li><li>Web server technologies - Node.js / Nginx</li></ul>"
+    },
+    {
+      "id":5,
+      "imagePath": "../../../assets/images/react.png",
+      "jobName": "ReactJS Developer",
+      "jobDescription": "We are looking for a ReactJS Developer who is motivated to combine the art of design with the art of programming Responsibilities will include implementing visual elements and their behaviors with user interactions.",
+      "jobNature": "Full Time",
+      "address": "417, Sumerru Business Corner, Nr. Somchintamani Appt., B/H Rajhans Multiplex, Pal Gam, Surat 395009, Gujarat, India",
+      "salary": "15k-25k",
+      "technology": "ReactJS",
+      "jobCatagory": "Content Writer",
+      "briefJobDescription": "<ul><li>Determine the functional, non-functional requirements and scope working with the business analysts and engineering managers</li><li>Design and develop multi-tier, cloud-native, high performance, and scalable solutions</li><li>Apply software engineering principles, design patterns and best practices to build solutions that are testable, secure, and robust</li><li>Lead cross functional agile teams across the software development lifecycle</li><li>Lead cross functional agile teams across the software development lifecycle</li></ul>",
+      "jobRequirement": "Years of Experience: 5+ years <br> Relevant hands-on experience with one of more of the following: <br> <ul> <li>Web technologies - JavaScript, HTML5, CSS3</li><li>Web frameworks – Angular / React JS</li><li>Mobile frameworks – React Native</li><li>Web server technologies - Node.js / Nginx</li></ul>"
+    },
+    {
+      "id":6,
+      "imagePath": "../../../assets/images/wordpress.png",
+      "jobName": "WordPress Developer",
+      "jobDescription": "We are looking to hire a dynamic WordPress Developer to join our global team. As an WordPress developer, you will be required to build a top-quality coding base. You will also be required to create amazing user interfaces for desktop and mobile apps.",
+      "jobNature": "Full Time",
+      "address": "417, Sumerru Business Corner, Nr. Somchintamani Appt., B/H Rajhans Multiplex, Pal Gam, Surat 395009, Gujarat, India",
+      "salary": "15k-25k",
+      "technology": "WordPress",
+      "jobCatagory": "Technology",
+      "briefJobDescription": "<ul><li>Determine the functional, non-functional requirements and scope working with the business analysts and engineering managers</li><li>Design and develop multi-tier, cloud-native, high performance, and scalable solutions</li><li>Apply software engineering principles, design patterns and best practices to build solutions that are testable, secure, and robust</li><li>Lead cross functional agile teams across the software development lifecycle</li><li>Lead cross functional agile teams across the software development lifecycle</li></ul>",
+      "jobRequirement": "Years of Experience: 5+ years <br> Relevant hands-on experience with one of more of the following: <br> <ul> <li>Web technologies - JavaScript, HTML5, CSS3</li><li>Web frameworks – Angular / React JS</li><li>Mobile frameworks – React Native</li><li>Web server technologies - Node.js / Nginx</li></ul>"
+    },
+    {
+      "id":7,
+      "imagePath": "../../../assets/images/GWT.png",
+      "jobName": "GWT Developer",
+      "jobDescription": "We are looking for a GWT Developer who is motivated to combine the art of design with the art of programming Responsibilities will include implementing visual elements and their behaviors with user interactions.",
+      "jobNature": "Full Time",
+      "address": "417, Sumerru Business Corner, Nr. Somchintamani Appt., B/H Rajhans Multiplex, Pal Gam, Surat 395009, Gujarat, India",
+      "salary": "15k-25k",
+      "technology": "GWT",
+      "jobCatagory": "Technology",
+      "briefJobDescription": "<ul><li>Determine the functional, non-functional requirements and scope working with the business analysts and engineering managers</li><li>Design and develop multi-tier, cloud-native, high performance, and scalable solutions</li><li>Apply software engineering principles, design patterns and best practices to build solutions that are testable, secure, and robust</li><li>Lead cross functional agile teams across the software development lifecycle</li><li>Lead cross functional agile teams across the software development lifecycle</li></ul>",
+      "jobRequirement": "Years of Experience: 5+ years <br> Relevant hands-on experience with one of more of the following: <br> <ul> <li>Web technologies - JavaScript, HTML5, CSS3</li><li>Web frameworks – Angular / React JS</li><li>Mobile frameworks – React Native</li><li>Web server technologies - Node.js / Nginx</li></ul>"
+    },
+    {
+      "id":8,
+      "imagePath": "../../../assets/images/GWT.png",
+      "jobName": "GWT Developer",
+      "jobDescription": "We are looking for a GWT Developer who is motivated to combine the art of design with the art of programming Responsibilities will include implementing visual elements and their behaviors with user interactions.",
+      "jobNature": "Full Time",
+      "address": "417, Sumerru Business Corner, Nr. Somchintamani Appt., B/H Rajhans Multiplex, Pal Gam, Surat 395009, Gujarat, India",
+      "salary": "15k-25k",
+      "technology": "GWT",
+      "jobCatagory": "Technology",
+      "briefJobDescription": "<ul><li>Determine the functional, non-functional requirements and scope working with the business analysts and engineering managers</li><li>Design and develop multi-tier, cloud-native, high performance, and scalable solutions</li><li>Apply software engineering principles, design patterns and best practices to build solutions that are testable, secure, and robust</li><li>Lead cross functional agile teams across the software development lifecycle</li><li>Lead cross functional agile teams across the software development lifecycle</li></ul>",
+      "jobRequirement": "Years of Experience: 5+ years <br> Relevant hands-on experience with one of more of the following: <br> <ul> <li>Web technologies - JavaScript, HTML5, CSS3</li><li>Web frameworks – Angular / React JS</li><li>Mobile frameworks – React Native</li><li>Web server technologies - Node.js / Nginx</li></ul>"
+    }
   ]
 }

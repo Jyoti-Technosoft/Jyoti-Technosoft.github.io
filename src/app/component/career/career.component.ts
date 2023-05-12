@@ -1,312 +1,76 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Career } from '@app/component/career/career';
+import data from '../../../assets/data/jt-website.json';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+import { Location } from '@angular/common';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-career',
   templateUrl: './career.component.html',
   styleUrls: ['./career.component.scss'],
+  encapsulation : ViewEncapsulation.None,
 })
 export class CareerComponent implements OnInit {
-  selectedCareer!: Career;
-  careers: Career[] = [
-    {
-      position: { label: 'React JS Developer', id: 'react' },
-      experience: 'Exp. 1.6 Years minimum',
-      requireLang: ['React JS', 'Bootstrap', 'CSS', 'Javascript', 'Web Pack'],
-      role: [
-        {
-          label: 'Role and Responsibilities :',
-          objectives: [
-            {
-              responsiblity:
-                'Developing new user-facing features using React.js',
-            },
-            {
-              responsiblity:
-                'Building reusable components and front-end libraries for future use',
-            },
-            {
-              responsiblity:
-                'Translating designs and wireframes into high-quality code',
-            },
-            {
-              responsiblity:
-                'Optimizing components for maximum performance across a vast array of web-capable devices and browsers Optimizing components for maximum performance across a vast array of web-capable devices and browsers',
-            },
-            {
-              responsiblity:
-                'Coordinating with various teams working on distinct layers',
-            },
-          ],
-        },
-        {
-          label: 'Required Skills :',
-          objectives: [
-            {
-              responsiblity:
-                'Thorough understanding of React.js and its core principles',
-            },
-            { responsiblity: 'Knowledge of React Routing' },
-            {
-              responsiblity:
-                'Knowledge of state management techniques like Redux/Flux, Context, etc',
-            },
-            {
-              responsiblity:
-                'Familiarity with modern front-end build pipelines and tools',
-            },
-          ],
-        },
-        {
-          label: 'Nice to have :',
-          objectives: [
-            { responsiblity: 'Experience with Git and Bitbucket' },
-            { responsiblity: 'Knowledge of Isomorphic React' },
-            { responsiblity: 'Experience with node and MongoDB' },
-          ],
-        },
-        {
-          label: 'Qualification :',
-          objectives: [
-            {
-              responsiblity:
-                'B.E/B.Tech in Computer Science, Engineering or a related field',
-            },
-          ],
-        },
-      ],
-    },
-    {
-      position: { label: 'Angular JS Developer', id: 'react' },
-      experience: 'Exp. 1.6 Years minimum',
-      requireLang: ['React JS', 'Bootstrap', 'CSS', 'Javascript', 'Web Pack'],
-      role: [
-        {
-          label: 'Role and Responsibilities :',
-          objectives: [
-            {
-              responsiblity:
-                'Developing new user-facing features using React.js',
-            },
-            {
-              responsiblity:
-                'Building reusable components and front-end libraries for future use',
-            },
-            {
-              responsiblity:
-                'Translating designs and wireframes into high-quality code',
-            },
-            {
-              responsiblity:
-                'Optimizing components for maximum performance across a vast array of web-capable devices and browsers Optimizing components for maximum performance across a vast array of web-capable devices and browsers',
-            },
-            {
-              responsiblity:
-                'Coordinating with various teams working on distinct layers',
-            },
-          ],
-        },
-        {
-          label: 'Required Skills :',
-          objectives: [
-            {
-              responsiblity:
-                'Thorough understanding of React.js and its core principles',
-            },
-            { responsiblity: 'Knowledge of React Routing' },
-            {
-              responsiblity:
-                'Knowledge of state management techniques like Redux/Flux, Context, etc',
-            },
-            {
-              responsiblity:
-                'Familiarity with modern front-end build pipelines and tools',
-            },
-          ],
-        },
-        {
-          label: 'Nice to have :',
-          objectives: [
-            { responsiblity: 'Experience with Git and Bitbucket' },
-            { responsiblity: 'Knowledge of Isomorphic React' },
-            { responsiblity: 'Experience with node and MongoDB' },
-          ],
-        },
-        {
-          label: 'Qualification :',
-          objectives: [
-            {
-              responsiblity:
-                'B.E/B.Tech in Computer Science, Engineering or a related field',
-            },
-          ],
-        },
-      ],
-    },
-    {
-      position: { label: 'Node JS Developer', id: 'react' },
-      experience: 'Exp. 1.6 Years minimum',
-      requireLang: ['React JS', 'Bootstrap', 'CSS', 'Javascript', 'Web Pack'],
-      role: [
-        {
-          label: 'Role and Responsibilities :',
-          objectives: [
-            {
-              responsiblity:
-                'Developing new user-facing features using React.js',
-            },
-            {
-              responsiblity:
-                'Building reusable components and front-end libraries for future use',
-            },
-            {
-              responsiblity:
-                'Translating designs and wireframes into high-quality code',
-            },
-            {
-              responsiblity:
-                'Optimizing components for maximum performance across a vast array of web-capable devices and browsers Optimizing components for maximum performance across a vast array of web-capable devices and browsers',
-            },
-            {
-              responsiblity:
-                'Coordinating with various teams working on distinct layers',
-            },
-          ],
-        },
-        {
-          label: 'Required Skills :',
-          objectives: [
-            {
-              responsiblity:
-                'Thorough understanding of React.js and its core principles',
-            },
-            { responsiblity: 'Knowledge of React Routing' },
-            {
-              responsiblity:
-                'Knowledge of state management techniques like Redux/Flux, Context, etc',
-            },
-            {
-              responsiblity:
-                'Familiarity with modern front-end build pipelines and tools',
-            },
-          ],
-        },
-        {
-          label: 'Nice to have :',
-          objectives: [
-            { responsiblity: 'Experience with Git and Bitbucket' },
-            { responsiblity: 'Knowledge of Isomorphic React' },
-            { responsiblity: 'Experience with node and MongoDB' },
-          ],
-        },
-        {
-          label: 'Qualification :',
-          objectives: [
-            {
-              responsiblity:
-                'B.E/B.Tech in Computer Science, Engineering or a related field',
-            },
-          ],
-        },
-      ],
-    },
-    {
-      position: { label: 'Vue Js Developer', id: 'react' },
-      experience: 'Exp. 1.6 Years minimum',
-      requireLang: ['React JS', 'Bootstrap', 'CSS', 'Javascript', 'Web Pack'],
-      role: [
-        {
-          label: 'Role and Responsibilities :',
-          objectives: [
-            {
-              responsiblity:
-                'Developing new user-facing features using React.js',
-            },
-            {
-              responsiblity:
-                'Building reusable components and front-end libraries for future use',
-            },
-            {
-              responsiblity:
-                'Translating designs and wireframes into high-quality code',
-            },
-            {
-              responsiblity:
-                'Optimizing components for maximum performance across a vast array of web-capable devices and browsers Optimizing components for maximum performance across a vast array of web-capable devices and browsers',
-            },
-            {
-              responsiblity:
-                'Coordinating with various teams working on distinct layers',
-            },
-          ],
-        },
-        {
-          label: 'Required Skills :',
-          objectives: [
-            {
-              responsiblity:
-                'Thorough understanding of React.js and its core principles',
-            },
-            { responsiblity: 'Knowledge of React Routing' },
-            {
-              responsiblity:
-                'Knowledge of state management techniques like Redux/Flux, Context, etc',
-            },
-            {
-              responsiblity:
-                'Familiarity with modern front-end build pipelines and tools',
-            },
-          ],
-        },
-        {
-          label: 'Nice to have :',
-          objectives: [
-            { responsiblity: 'Experience with Git and Bitbucket' },
-            { responsiblity: 'Knowledge of Isomorphic React' },
-            { responsiblity: 'Experience with node and MongoDB' },
-          ],
-        },
-        {
-          label: 'Qualification :',
-          objectives: [
-            {
-              responsiblity:
-                'B.E/B.Tech in Computer Science, Engineering or a related field',
-            },
-          ],
-        },
-      ],
-    },
-  ];
-  filterCareer: any;
-  searchedCareer!: string;
+  pageSize = 5;
+  data = { ...data };
+  jobInfo: any;
+  onPageData: any = [];
+  searchText:any = {};
+  jobCatagory: any;
+  tooDisplay = false;
+  selectedJobs: any | undefined;
 
-  constructor(private router: Router) {}
+  constructor(
+    private route: Router,
+    private activeRoute: ActivatedRoute,
+    private location: Location,
+    private scroller: ViewportScroller
+  ) {}
 
   ngOnInit() {
-    this.selectedCareer = this.careers[0];
-    this.filterCareer = this.careers;
+    this.jobInfo = this.data?.jobs;
+    this.onPageData = this.jobInfo.slice(0, this.pageSize);
+    this.getSelectedJobData();
   }
 
-  onSelect(data: Career) {
-    this.selectedCareer = data;
+  toggledData() {
+    this.tooDisplay = !this.tooDisplay;
   }
 
-  onSearch(event) {
-    const inputData = event?.target?.value;
-    this.filterCareer = this.careers.filter((jobs) => {
-      return jobs?.position.label.toLowerCase().includes(inputData);
-    });
+  back() {
+    this.location.back();
+  }
+  getSelectedJobData() {
+    this.activeRoute.queryParams.subscribe((selectedJob:any)=>{
+      if(selectedJob) {
+        this.selectedJobs = this.data.jobs.find((data)=> data.id == parseInt(selectedJob.job));
+      }
+    })
   }
 
-  showAll() {
-    this.searchedCareer = '';
-    this.filterCareer = this.careers;
+  onPageChanged(e) {
+    let firstCut = e.pageIndex * e.pageSize;
+    let secondCut = firstCut + e.pageSize;
+    this.onPageData = this.jobInfo.slice(firstCut, secondCut);
+  }
+  filterChange(data) {
+    if(this.searchText.jobNature == data) {
+      delete this.searchText.jobNature
+    } else {
+      this.searchText.jobNature = data ;
+    }
+  }
+  filterChangee(data) {
+    if(this.searchText.jobCatagory == data) {
+      delete this.searchText.jobCatagory
+    } else {
+      this.searchText.jobCatagory = data ;
+    }
   }
 
-  applyForjob() {
-    const id = this.selectedCareer?.position?.id;
-    this.router.navigate(['/career/' + id]);
+  jobs(id: number) {
+    const queryParams: Params = { job: id };
+   this.route.navigate(['/career'], { queryParams });
+   this.scroller.scrollToPosition([0,500])
   }
 }

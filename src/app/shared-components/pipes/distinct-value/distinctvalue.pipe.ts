@@ -11,7 +11,7 @@ export class DistinctvaluePipe implements PipeTransform {
     for (let i = 0; i < value?.length; i++) {
       if (!unique[value[i][`${field}`]]) {
         distinct.push(value[i]);
-        unique[value[i].technology] = 1;
+        unique[value[i][`${field}`]] = 1;
       }
     }
     return distinct;

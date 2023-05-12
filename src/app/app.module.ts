@@ -15,7 +15,6 @@ import { FooterComponent } from '@app/component/footer/footer.component';
 import { ContactUsComponent } from '@app/component/contact-us/contact-us.component';
 import { ServicesComponent } from '@app/component/services/services.component';
 import { HireDeveloperModule } from '@app/component/hire-developer/hire-developer.module';
-import { PortfolioComponent } from './component/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [

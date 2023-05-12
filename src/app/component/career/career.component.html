@@ -1,127 +1,194 @@
-<!-- src="../../../assets/images/career123.png" -->
-<div class="career-banner-wrap">
-  <img
-    src="https://www.toptal.com/developers/img-resize/view/190323928d66d26aee5e499601ba447e.png"
-    class="img-fluid entered lazyloaded"
-    alt="Career"
-    data-lazy-src="assets/images/hiring.png"
-    data-ll-status="loaded"
-  />
-  <img
-    src="../../../assets/images/career12.png"
-    class="img-fluid entered lazyloaded"
-    alt="Career"
-    data-lazy-src="assets/images/career12.png"
-    data-ll-status="loaded"
-  />
-  <noscript
-    ><img
-      src="../../../assets/images/career12.png"
-      class="img-fluid"
-      alt="Career"
-  /></noscript>
-</div>
-
-<section class="main-section career-block padding-top col-12">
-  <div class="container mt-3">
-    <div class="search-location-form col-12 mb-3">
-      <div class="form-group select-location-input col-3">
-        <div id="filtering" class="custom-html-dropdown" role="navigation">
-          <button
-            class="dropdown-input cat-all col-12 p-2"
-            type="button"
-            id="job-location"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            Location
-          </button>
+<div class="container mt-5 pt-5">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="text-center">
+        <div class="header-title mb-3">
+          <h2 class="title">Career</h2>
         </div>
-      </div>
-      <div class="form-search-block col-9">
-        <div class="row">
-          <div class="col-9">
-            <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                id="jobInput"
-                placeholder="Keywords (ex php developer)"
-                (input)="onSearch($event)"
-                [(ngModel)]="searchedCareer"
-              />
-            </div>
-          </div>
-          <div class="col-3">
-            <button (click)="showAll()" class="btn btn-primary w-100">
-              Show All Jobs
-            </button>
-          </div>
-        </div>
+        <p>
+          Let's Discuss your project details in dept with our experts and get
+          quick solutions for your technical problems
+        </p>
       </div>
     </div>
-
-    <div class="careers-skills-block col-12 d-flex mb-5">
-      <div class="col-3 py-0">
-        <mat-card
-          class="careers-items-list filter-job-results mt-4"
-          *ngFor="let careersItem of filterCareer"
-          (click)="onSelect(careersItem)"
-        >
-          <mat-card-header>
-            <mat-card-title class="header-title">{{
-              careersItem.position.label
-            }}</mat-card-title>
-          </mat-card-header>
-          <mat-card-content class="careers-experience">{{
-            careersItem.experience
-          }}</mat-card-content>
-        </mat-card>
+    <div class="container mt-5 mb-5 pb-5 pt-5">
+      <div class="row">
+        <div style="z-index: 0">
+          <div class="mt-2 mb-2">
+            <app-multiple-carousel
+              [src]="jobInfo | distinctvalue : 'technology'"
+              [isCareer]="true"
+              (emitValueOnClick)="searchText.technology = $event"
+            ></app-multiple-carousel>
+          </div>
+        </div>
       </div>
-      <div class="careers-content-block col-9 mx-3">
-        <mat-card
-          class="careers-items-list filter-job-results mt-4 fit-content mx-3 w-100"
-        >
-          <mat-card-header>
-            <mat-card-title class="header-title detail-view">{{
-              selectedCareer.position.label
-            }}</mat-card-title>
-          </mat-card-header>
-          <mat-card-content class="careers-experience">
-            {{ selectedCareer.experience }}
-            <mat-list>
-              <mat-list-item
-                *ngFor="let item of selectedCareer.requireLang"
-                class="w-auto d-inline-block p-3 m-1 border text-center skill-set-list"
-              >
-                <span> {{ item }} </span>
-              </mat-list-item>
-            </mat-list>
-            <div *ngFor="let item of selectedCareer.role">
-              <h5>{{ item.label }}</h5>
-              <mat-list>
-                <mat-list-item
-                  *ngFor="let data of item?.objectives"
-                  class="h-auto"
+      <div class="container">
+        <div class="row justify-content-center d-flex">
+          <div class="col-lg-4 sidebar">
+            <div class="single-slidebar">
+              <h4 class="category-heading">Jobs by Category</h4>
+              <ul class="job-catagory no-bullets">
+                <ng-container
+                  *ngFor="let data of jobInfo | distinctvalue : 'jobCatagory'"
                 >
-                  <div class="d-flex">
-                    <mat-icon matListIcon class="icon-size d-inline-flex"
-                      >lens</mat-icon
+                  <li
+                    class="job-catagory-name"
+                    (click)="filterChangee(data?.jobCatagory)"
+                  >
+                    <a
+                      class="justify-content-between d-flex"
+                      [class.highlight]="
+                        (selectedJobs?.jobCatagory ||
+                          searchText?.jobCatagory) == data?.jobCatagory
+                      "
                     >
-                    <div class="mx-2">{{ data.responsiblity }}</div>
+                      <p class="job-catagory-margin">
+                        {{ data.jobCatagory }}
+                      </p></a
+                    >
+                  </li>
+                </ng-container>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-8 job-list">
+            <div class="d-flex">
+              <ng-container
+                *ngFor="let data of jobInfo | distinctvalue : 'jobNature'"
+              >
+                <ul
+                  class="job-catagory"
+                  (click)="filterChange(data?.jobNature)"
+                >
+                  <li
+                    class="jobNature"
+                    [class.highlight]="
+                      (searchText?.jobNature || selectedJobs?.jobNature) ==
+                      data?.jobNature
+                    "
+                  >
+                    {{ data.jobNature }}
+                  </li>
+                </ul>
+              </ng-container>
+            </div>
+            <ng-container>
+              <ng-container *ngIf="!selectedJobs">
+                <ng-container
+                  *ngFor="let data of onPageData | filter : searchText"
+                >
+                  <div class="row m-1">
+                    <div class="single-job one-job d-flex">
+                      <div class="job-tags">
+                        <img
+                          class="img-topp"
+                          src="{{ data.imagePath }}"
+                          alt="Angular"
+                        />
+                      </div>
+                      <div class="details">
+                        <div
+                          class="title d-flex flex-row justify-content-between"
+                        >
+                          <div class="titles">
+                            <h4>{{ data.jobName }}</h4>
+                          </div>
+                          <ul class="applyButton">
+                            <li class="apply">
+                              <button
+                                class="contact-submit-btn pe-auto"
+                                (click)="jobs(data.id)"
+                              >
+                                Apply
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                        <p class="address">
+                          {{ data.jobDescription }}
+                        </p>
+                        <h5 class="address">
+                          Job Nature: {{ data.jobNature }}
+                        </h5>
+                        <p class="address">
+                          <i class="bi bi-map"></i>
+                          {{ data.address }}
+                        </p>
+                        <p class="address">
+                          <i class="bi bi-database"></i> {{ data.salary }}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </mat-list-item>
-              </mat-list>
-            </div>
-            <div class="d-flex justify-content-end">
-              <button class="bg-color border-0" (click)="applyForjob()">
-                Apply now
-              </button>
-            </div>
-          </mat-card-content>
-        </mat-card>
+                </ng-container>
+                <mat-paginator
+                  [length]="(jobInfo | filter : searchText).length"
+                  [pageSize]="5"
+                  [pageSizeOptions]="[10, 15, 20]"
+                  (page)="onPageChanged($event)"
+                  showFirstLastButtons
+                ></mat-paginator>
+              </ng-container>
+            </ng-container>
+            <ng-container *ngIf="selectedJobs">
+              <div class="single-job d-flex">
+                <div class="details col-lg-12">
+                  <div class="title d-flex flex-row justify-content-between">
+                    <div class="titles">
+                      <button class="button btn btn-light" id="targetGreen" (click)="back()">
+                        <span><i class="bi bi-arrow-left"></i>Back</span>
+                      </button>
+                      <div class="row">
+                        <div class="col-8">
+                          <h2>{{ selectedJobs.jobName }}</h2>
+                          <p class="address">
+                            <i class="bi bi-map"></i>
+                            {{ selectedJobs.address }}
+                          </p>
+                        </div>
+                        <div class="col-4">
+                          <div class="job-tags d-flex justify-content-around">
+                            <img
+                              class="img-top"
+                              src="{{ selectedJobs.imagePath }}"
+                              alt="Angular"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <h4>Job Description</h4>
+                    </div>
+                  </div>
+                  <p class="address">
+                    {{ selectedJobs.jobDescription }}
+                  </p>
+                  <p
+                    class="address"
+                    [innerHTML]="selectedJobs.briefJobDescription"
+                  >
+                    {{ selectedJobs.briefJobDescription }}
+                  </p>
+                  <h4>Job Requirement</h4>
+                  <p class="address" [innerHTML]="selectedJobs.jobRequirement">
+                    {{ selectedJobs.jobRequirement }}
+                  </p>
+                  <button
+                    *ngIf="!tooDisplay"
+                    class="contact-submit-btn pe-auto"
+                    (click)="toggledData()"
+                  >
+                    Apply
+                  </button>
+                  <ng-container *ngIf="tooDisplay">
+                    <app-modal></app-modal>
+                  </ng-container>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</section>
+</div>

@@ -1,7 +1,10 @@
 import {
   Component,
+  EventEmitter,
   Input,
   OnInit,
+  Output,
+  ViewEncapsulation,
 } from '@angular/core';
 
 import { OwlOptions } from 'ngx-owl-carousel-o';
@@ -10,16 +13,20 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   selector: 'app-multiple-carousel',
   templateUrl: './multiple-carousel.component.html',
   styleUrls: ['./multiple-carousel.component.scss'],
+  encapsulation : ViewEncapsulation.None
 })
 export class MultipleCarouselComponent implements OnInit {
 
   @Input('src') src: any[] | undefined;
+  @Input('isCareer') isCareer: boolean = false;
+
+  @Output('emitValueOnClick') emitValueOnClick = new EventEmitter<string>();
   customOptions: OwlOptions = {
     loop: true,
     margin: 30,
     autoplay:true,
     lazyLoad: true,
-    dots: false,
+    dots: true,
     freeDrag:true,
     responsive: {
       0: {
@@ -38,6 +45,10 @@ export class MultipleCarouselComponent implements OnInit {
        items: 5
      }
     }
+  }
+
+  emitOnClick(value: string) {
+    this.emitValueOnClick.emit(value);
   }
 
   constructor() {}
