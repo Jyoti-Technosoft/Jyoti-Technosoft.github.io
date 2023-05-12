@@ -4,4 +4,7 @@
     <router-outlet></router-outlet>
   </div>
   <app-footer></app-footer>
+  <button *ngIf="showBtn" class="top-btn rounded-circle" (click)="gotoTop()">
+    <i class="bi bi-arrow-up-short"></i>
+  </button>
 </div>
