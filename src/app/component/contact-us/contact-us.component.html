@@ -132,7 +132,7 @@
         <a (click)="selectedItem = 'adajanBranch'" class="cursor-pointer">
           <div>
             <span class="title-address">Main Branch:</span>
-            <p>
+            <p class="hover-underline-animation" [class.active]="selectedItem == 'adajanBranch'">
               228, Second Floor, Green Elina, Nr. Sneh Sankul's Vadi, Anand
               Mahal Rd, Giriraj Society, Adajan, Surat 395009, Gujarat, India
             </p>
@@ -141,7 +141,7 @@
         <a class="cursor-pointer" (click)="selectedItem = 'palBranch'">
           <div>
             <span class="title-address">Pal Branch:</span>
-            <p>
+            <p class="hover-underline-animation" [class.active]="selectedItem == 'palBranch'">
               417, Sumerru Business Corner, Nr. Somchintamani Appt., B/H Rajhans
               Multiplex, Pal Gam, Surat 395009, Gujarat, India
             </p>
