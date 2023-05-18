@@ -36,6 +36,13 @@ const routes: Routes = [
             (m) => m.PortfolioComponentModule
           ),
       },
+      {
+        path: 'about-us',
+        loadChildren: () =>
+          import('@app/component/about-us/about-us.module').then(
+            (m) => m.AboutUsModule
+          ),
+      },
       { path: 'contact-us', component: ContactUsComponent },
       { path: 'services', component: ServicesComponent },
     ],

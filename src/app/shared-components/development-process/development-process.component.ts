@@ -21,8 +21,8 @@ export class DevelopmentProcessComponent {
       rect.top >= 0 &&
       rect.left >= 0 &&
       rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        (window.innerHeight) &&
+      rect.right <= (window.innerWidth)
     );
   }
 
@@ -39,7 +39,7 @@ export class DevelopmentProcessComponent {
   //  ******
   // Note : This is used for removeing all card
   // *******
-  // else if (items[i].classList.contains('in-view')) {
+  // else if (items[i].classList.contains('in-view')) {\
   //   items[i].classList.remove('in-view');
   // }
 }

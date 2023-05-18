@@ -21,5 +21,4 @@ export class JtTechnologyComponent implements OnInit {
   onChange(selectedTechnology) {
     this.selectedTechnology = selectedTechnology;
   }
-
-  }
+}

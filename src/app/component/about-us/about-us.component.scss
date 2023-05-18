@@ -1,0 +1,148 @@
+$color_1: #2980b9;
+$color_2: black;
+$color_3: white;
+$background-color_1: transparent;
+$background-color_2: #bbb;
+$background-color_3: #2980b9;
+
+@keyframes pop-word {
+	to {
+		transform: rotateX(0);
+	}
+}
+@keyframes show {
+	to {
+		opacity: 1;
+	}
+}
+.aboutus-center-text {
+	width: 50vw;
+	margin: 1.5em auto;
+}
+.scroll-animation {
+	display: block;
+	animation: show 0.01s forwards, pop-word 1.5s forwards;
+	animation-timing-function: cubic-bezier(0.14, 1.23, 0.33, 1.16);
+	opacity: 0;
+	transform: rotateX(120deg);
+	transform-origin: 50% 100%;
+}
+.list {
+	font-size: 18px;
+}
+li {
+	list-style: none;
+	margin: 1em 0;
+	span {
+		color: $color_1;
+		font-size: 1.2em;
+	}
+}
+.aboutus.card-img-top {
+	width: 3.5em;
+}
+.aboutus-card-img-top-div {
+	margin-top: 1.5em;
+}
+.aboutus-center {
+	margin: 4em 0 4em 0;
+}
+.card {
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	border: none;
+	width: auto;
+}
+.about-us-card {
+	margin: 4em 0 4em 0;
+}
+.aboutus-values {
+	margin: 8em 0 4em 0;
+}
+.aboutus-values-img {
+	width: 40vw;
+}
+.aboutus-values-table {
+	td {
+		padding: 0.5em 0.9em 0.5em 0;
+	}
+}
+.our-services {
+	margin-top: 50px;
+}
+.flip-card {
+	background-color: $background-color_1;
+	width: auto;
+	height: 14em;
+	perspective: 1000px;
+	border-radius: 2em;
+	&:hover {
+		.flip-card-inner {
+			transform: rotateY(180deg);
+		}
+	}
+}
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	border-radius: 2em;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.flip-card-front {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 2em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: $background-color_2;
+	color: $color_2;
+}
+.flip-card-back {
+	position: absolute;
+	padding: 1em;
+	width: 100%;
+	height: 100%;
+	border-radius: 2em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	background-color: $background-color_3;
+	color: $color_3;
+	transform: rotateY(180deg);
+}
+.aboutus-values-table-title {
+	color: $color_1;
+	font-weight: bold;
+}
+@media only screen and (max-width: 500px) {
+	.aboutus-top-img {
+		width: 90vw;
+	}
+	.aboutus-values-img {
+		width: 90vw;
+	}
+}
+@media only screen and (max-width: 770px) {
+	.aboutus-top-title {
+		margin-top: 1em;
+	}
+	.aboutus-values-img {
+		width: 80vw;
+		margin: 0 auto;
+	}
+}
+@media only screen and (max-width: 990px) {
+	.aboutus-top-title {
+		width: 80vw;
+		margin-top: 1em;
+	}
+	.aboutus-top-img {
+		margin: 0 auto;
+	}
+}

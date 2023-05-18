@@ -37,6 +37,7 @@ export class MainHeaderComponent implements OnInit {
     { label: 'Services', icon: 'pi pi-fw pi-refresh', routerlink: 'services' },
     { label: 'Contact', icon: 'pi pi-fw pi-refresh', routerlink: 'contact-us' },
     { label: 'Career', icon: 'pi pi-fw pi-refresh', routerlink: 'career' },
+    { label: 'About', icon: 'pi pi-fw pi-refresh', routerlink: 'about-us' },
   ];
 
   @ViewChild('mainNavbar') navbar!: ElementRef;
