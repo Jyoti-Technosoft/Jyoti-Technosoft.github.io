@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ApplyNowComponent } from './apply-now.component';
+import { SharedModule } from '@app/shared-components/shared.module';
 
 describe('ApplyNowComponent', () => {
   let component: ApplyNowComponent;
@@ -8,7 +9,8 @@ describe('ApplyNowComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ApplyNowComponent ]
+      declarations: [ ApplyNowComponent ],
+      imports:[SharedModule]
     })
     .compileComponents();
 

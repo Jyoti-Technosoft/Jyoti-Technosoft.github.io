@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {RouterModule} from '@angular/router';
+import { RouterModule } from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppRoutingModule } from '@app/app-routing.module';
+import { AppComponent } from '@app/app.component';
 import { MainHeaderComponent } from '@app/component/main-header/main-header.component';
 import { BlankComponent } from '@app/layout/blank/blank.component';
 import { FullLayoutComponent } from '@app/layout/full-layout/full-layout.component';
@@ -15,7 +13,6 @@ import { FooterComponent } from '@app/component/footer/footer.component';
 import { ContactUsComponent } from '@app/component/contact-us/contact-us.component';
 import { ServicesComponent } from '@app/component/services/services.component';
 import { HireDeveloperModule } from '@app/component/hire-developer/hire-developer.module';
-import { PortfolioComponent } from './component/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -31,10 +28,8 @@ import { PortfolioComponent } from './component/portfolio/portfolio.component';
     BrowserModule,
     RouterModule,
     SharedModule,
-    BrowserAnimationsModule,
     AppRoutingModule,
-    NgbModule,
-    HireDeveloperModule
+    HireDeveloperModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

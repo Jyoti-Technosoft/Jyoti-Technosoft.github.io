@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '@app/shared-components/shared.module';
-import { ApplyNowComponent } from '../apply-now/apply-now.component';
-import { CareerComponent } from './career.component';
+import { ApplyNowComponent } from '@app/component/apply-now/apply-now.component';
+import { CareerComponent } from '@app/component/career/career.component';
 
 const routes: Routes = [
   {
@@ -11,7 +11,7 @@ const routes: Routes = [
     component: CareerComponent,
   },
   {
-    path: ':role',
+    path: ':technology',
     component: ApplyNowComponent,
   },
 ];

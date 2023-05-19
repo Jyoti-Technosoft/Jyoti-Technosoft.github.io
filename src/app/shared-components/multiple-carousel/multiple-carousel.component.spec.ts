@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MultipleCarouselComponent } from './multiple-carousel.component';
+import { SharedModule } from '../shared.module';
 
 describe('MultipleCarouselComponent', () => {
   let component: MultipleCarouselComponent;
@@ -8,7 +9,8 @@ describe('MultipleCarouselComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MultipleCarouselComponent ]
+      declarations: [ MultipleCarouselComponent ],
+      imports:[SharedModule]
     })
     .compileComponents();
 

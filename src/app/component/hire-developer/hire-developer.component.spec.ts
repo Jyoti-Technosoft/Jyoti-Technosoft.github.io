@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HireDeveloperComponent } from './hire-developer.component';
+import { SharedModule } from '@app/shared-components/shared.module';
 
 describe('HireDeveloperComponent', () => {
   let component: HireDeveloperComponent;
@@ -8,7 +9,8 @@ describe('HireDeveloperComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HireDeveloperComponent ]
+      declarations: [ HireDeveloperComponent ],
+      imports: [SharedModule]
     })
     .compileComponents();
 
